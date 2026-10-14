@@ -1,0 +1,29 @@
+# manuscript sources stay private until publication; only code and data are public
+paper/
+*.tex
+*.bib
+*.bbl
+*.cls
+*.bst
+RUN_ON_WSL.md
+response_to_*
+# downloads, backups, patches
+*.zip
+*:Zone.Identifier
+*.bak
+*.orig
+*.rej
+# Foundry build output and local node log
+code/out/
+code/cache/
+code/broadcast/
+code/results/anvil.log
+# Python / editors
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+# never commit keys or env files
+.env
+*.env
+*.key

@@ -1,0 +1,145 @@
+{
+  "summary": {
+    "network": "sepolia",
+    "chainId": 11155111,
+    "registry": "0x249f6E19e591a4d379EE0D457790B147772c8582",
+    "epochs": 10,
+    "batch": 256,
+    "revocationsPerEpoch": 4,
+    "confirmations": 1,
+    "commit_gas_mean": 188512.8,
+    "inclusion_s_median": 10.32,
+    "inclusion_s_max": 24.68,
+    "fee_eth_total": 0.0000018851349230040002,
+    "date": "2026-10-14T02:41:41.374Z"
+  },
+  "rows": [
+    {
+      "label": "deploy",
+      "txHash": "0x28eb31b19e1f46a16554b37791eb6f2415ff895c3fe3a687922c23210fb50d56",
+      "block": 11910319,
+      "gasUsed": 13282875,
+      "inclusion_ms": 24944
+    },
+    {
+      "label": "registerIssuer",
+      "txHash": "0x05c51f7b52a4c9cc65152c8a79195b58448298e31b62d97ce29c627079aaf80d",
+      "block": 11910321,
+      "gasUsed": 1354177,
+      "gasPriceGwei": 0.001000005,
+      "feeEth": 0.000001354183770885,
+      "submit_ms": 1826,
+      "inclusion_ms": 23387
+    },
+    {
+      "label": "commitEpoch 1",
+      "txHash": "0xdf0f854db521c3242453445653a15dc2bbefa07d449374507515e0a9c6c3f21b",
+      "block": 11910322,
+      "gasUsed": 276288,
+      "gasPriceGwei": 0.001000005,
+      "feeEth": 2.7628938144e-7,
+      "submit_ms": 1793,
+      "inclusion_ms": 8677,
+      "build_ms": 151
+    },
+    {
+      "label": "commitEpoch 2",
+      "txHash": "0x05be79f054ec6d838ec70a049641834bab504acfcca38fdf1b0e8c76430d36e2",
+      "block": 11910323,
+      "gasUsed": 178752,
+      "gasPriceGwei": 0.001000005,
+      "feeEth": 1.7875289376e-7,
+      "submit_ms": 1788,
+      "inclusion_ms": 9949,
+      "build_ms": 150
+    },
+    {
+      "label": "commitEpoch 3",
+      "txHash": "0x9e4fc359e6642f9019c0771d7f4ae0f93bba6c73559aad31c3ed7c5e8b0acb5a",
+      "block": 11910325,
+      "gasUsed": 178776,
+      "gasPriceGwei": 0.001000004,
+      "feeEth": 1.78776715104e-7,
+      "submit_ms": 1809,
+      "inclusion_ms": 21616,
+      "build_ms": 148
+    },
+    {
+      "label": "commitEpoch 4",
+      "txHash": "0x7dde1c533eb2c7faafbd0f50eea6c90bc7c645ab34509823dd04ccf6da46bb72",
+      "block": 11910326,
+      "gasUsed": 178764,
+      "gasPriceGwei": 0.001000004,
+      "feeEth": 1.78764715056e-7,
+      "submit_ms": 1790,
+      "inclusion_ms": 10051,
+      "build_ms": 152
+    },
+    {
+      "label": "commitEpoch 5",
+      "txHash": "0xede1ffa4dd3ce62475ba943bc8ba4bd322e4e2ae40ae1c8f27576d3d53c20b13",
+      "block": 11910328,
+      "gasUsed": 178776,
+      "gasPriceGwei": 0.001000003,
+      "feeEth": 1.78776536328e-7,
+      "submit_ms": 1815,
+      "inclusion_ms": 20406,
+      "build_ms": 154
+    },
+    {
+      "label": "commitEpoch 6",
+      "txHash": "0xb46b7e458be7371574cf70131419bd6b142213c9fa81a49384b06ea5984d4217",
+      "block": 11910329,
+      "gasUsed": 178764,
+      "gasPriceGwei": 0.001000003,
+      "feeEth": 1.78764536292e-7,
+      "submit_ms": 1784,
+      "inclusion_ms": 11246,
+      "build_ms": 142
+    },
+    {
+      "label": "commitEpoch 7",
+      "txHash": "0xad06af061befd703f3dbf225627677ee5499e366fe6f53480c9fee3deeb84e10",
+      "block": 11910330,
+      "gasUsed": 178752,
+      "gasPriceGwei": 0.001000003,
+      "feeEth": 1.78752536256e-7,
+      "submit_ms": 2023,
+      "inclusion_ms": 8697,
+      "build_ms": 181
+    },
+    {
+      "label": "commitEpoch 8",
+      "txHash": "0x662384eb91028711f5d0ae730e14a1519cf52eab1c15eb077b2402836b78a907",
+      "block": 11910331,
+      "gasUsed": 178752,
+      "gasPriceGwei": 0.001000003,
+      "feeEth": 1.78752536256e-7,
+      "submit_ms": 1808,
+      "inclusion_ms": 9949,
+      "build_ms": 192
+    },
+    {
+      "label": "commitEpoch 9",
+      "txHash": "0x354e179ce82195cf0efbbc1e09508e3c74d81a115ffcadca7939e9efb25bbef6",
+      "block": 11910332,
+      "gasUsed": 178752,
+      "gasPriceGwei": 0.001000003,
+      "feeEth": 1.78752536256e-7,
+      "submit_ms": 1813,
+      "inclusion_ms": 10320,
+      "build_ms": 174
+    },
+    {
+      "label": "commitEpoch 10",
+      "txHash": "0xcb04ce038f3c4035a660cb1a642524dfff415386488e5a9f8b0846f6efcb56c7",
+      "block": 11910334,
+      "gasUsed": 178752,
+      "gasPriceGwei": 0.001000003,
+      "feeEth": 1.78752536256e-7,
+      "submit_ms": 1805,
+      "inclusion_ms": 24680,
+      "build_ms": 168
+    }
+  ]
+}

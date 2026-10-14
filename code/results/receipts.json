@@ -1,0 +1,1675 @@
+[
+ {
+  "ctx": "",
+  "txHash": "0x3a292421e7bd4d29390f7340caadc49b4a5617e5908825646059858d770a757b",
+  "block": 41,
+  "gasUsed": 46653,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=1",
+  "txHash": "0x638a6f34c67d9a99f2af00ff48216de71f7a10c0baf6370e02bfe1a3b6c72d51",
+  "block": 42,
+  "gasUsed": 47369,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=1",
+  "txHash": "0x15d060801d1a8c0955034a98814287133054b195c0084d1a0292344b29123105",
+  "block": 43,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=1",
+  "txHash": "0x068e98eb3f553179365aef4db8988a6d09d610e9776b19536b6e6b28e4ea53be",
+  "block": 44,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=1 B4",
+  "txHash": "0x84a2dba957ee0a6badb7062ccc08921136abbbb43118cd96caaa221d4dd997be",
+  "block": 46,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=1 B4",
+  "txHash": "0xa4403592cefa7dc086fbe515a14d3548b90a559c3fe071d70692f79840b342a5",
+  "block": 47,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=1 EpochCred k=1",
+  "txHash": "0xb4ce2e0a529e8e9ef48feba794ced73fd7fbe0cfde0983beb225835b2d281d61",
+  "block": 50,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=1 EpochCred k=1",
+  "txHash": "0xc548d1c5fd5adf4f279f6ff5cb1bec38da300032733b31f28f034da0d0e4657c",
+  "block": 51,
+  "gasUsed": 68362,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=1 EpochCred k=3",
+  "txHash": "0x26e217ece40e49b6501e3201c07adbff5471a362d06966ec372b9a5a8c9248ec",
+  "block": 54,
+  "gasUsed": 99148,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=1 EpochCred k=3",
+  "txHash": "0x94cfff477320de825795f3ae4fe05d721393d1c4b67b98841aad3002a6715f8e",
+  "block": 55,
+  "gasUsed": 82048,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=1 EpochCred k=5",
+  "txHash": "0xb4e78a095c30d27d74821b826c6b44fe86bc374fae16a7cbafef778876a416f8",
+  "block": 58,
+  "gasUsed": 112882,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=1 EpochCred k=5",
+  "txHash": "0x93bbfd45b31818c0bab888a92642f0e980d90cb0386016d2c4f8a637b1aff96d",
+  "block": 59,
+  "gasUsed": 95770,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=1 EpochCred k=3 full",
+  "txHash": "0x36eed9fd40ee526a8850130d55f757c3c743f0ba1ebd5d69511c3f11fde0a226",
+  "block": 62,
+  "gasUsed": 148591,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=1 EpochCred k=3 full",
+  "txHash": "0x5971ae07d0c7cb95077737fe460db0437056710ace8fe5b1685cd4176023d4d9",
+  "block": 63,
+  "gasUsed": 151379,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=2",
+  "txHash": "0xad6f97f4e32abbf5f734163f4a75ccf851d9580a08fc6c6605d10f186d0b68e9",
+  "block": 64,
+  "gasUsed": 70738,
+  "calldataBytes": 132
+ },
+ {
+  "ctx": "E1 B=2",
+  "txHash": "0x194da0fbfbc6536dbc40737fa747c67417b4bc3aec0578f3a46cdad5158e5ced",
+  "block": 65,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=2",
+  "txHash": "0x25588d055c4a038cf5f9b644088e5c9d19bd0ffb7618386211a4d802522829a9",
+  "block": 66,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=2 B4",
+  "txHash": "0xacb6396d45fd0368608d7ca808d56b1ce76d7711328a3087c73060f131cc02fa",
+  "block": 68,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=2 B4",
+  "txHash": "0x794224a13ff0ff09e56632919e2f9d6c0383eceb6b185227c1561b4b04507394",
+  "block": 69,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=2 EpochCred k=1",
+  "txHash": "0x2c906610aed22a8fa3d3729409e56fa0ee2d7978a6f3332ec9f6d5a721beb390",
+  "block": 72,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=2 EpochCred k=1",
+  "txHash": "0xdb2b46a7096c6075433c0dc09a30e265cb3522a7e1f84e1f788364729c706b44",
+  "block": 73,
+  "gasUsed": 68350,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=2 EpochCred k=3",
+  "txHash": "0x1a879504223ebca60055c18163c956520f7578c6c2549a6baaeaa76657ac5ad5",
+  "block": 76,
+  "gasUsed": 99160,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=2 EpochCred k=3",
+  "txHash": "0x75bebc843581dc5097114d60e4bb25e8db46ad9098896ee42dbe30f92b183c73",
+  "block": 77,
+  "gasUsed": 82072,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=2 EpochCred k=5",
+  "txHash": "0x0a8ee9ee2b04cd899e7bbf5884c0969065eb38668ababf5cdb7842f8f5fc22fe",
+  "block": 80,
+  "gasUsed": 112882,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=2 EpochCred k=5",
+  "txHash": "0x86e08057d83a400a7ac1e59a1747a0fe213c8de64e109be42b2019421d2a57c6",
+  "block": 81,
+  "gasUsed": 95770,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=2 EpochCred k=3 full",
+  "txHash": "0x05d72f45d6257a74fc21b381de1f9a49d72a1c68653b362dcf8a89293277f399",
+  "block": 84,
+  "gasUsed": 148603,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=2 EpochCred k=3 full",
+  "txHash": "0xc533717a009aa0645fe846855bb92174ff8ee2f70cc12f364538bd804a7991d4",
+  "block": 85,
+  "gasUsed": 151391,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=4",
+  "txHash": "0x860cd59b46b43b506c79dd8712ff552a75411f0b3895dc87f07b33a1d45f55cf",
+  "block": 86,
+  "gasUsed": 117452,
+  "calldataBytes": 196
+ },
+ {
+  "ctx": "E1 B=4",
+  "txHash": "0xdfe6299214abdf6c19c3f111cb39f20f27ada0ba82e117ba39533008a436a557",
+  "block": 87,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=4",
+  "txHash": "0x2170425687fff9c5b448b3c058f500ab98275c2fe30e1ade0e1f275a64b4e87e",
+  "block": 88,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=4 B4",
+  "txHash": "0x9b39caa639d9ce7ac7af7fed7c0dada1b04326281fa3d166067dece546eeb667",
+  "block": 90,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=4 B4",
+  "txHash": "0xc1d64d8357d4e5a5b77d675eb45ead6dbf364fa334eb6879d9fc652d0cd92c13",
+  "block": 91,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=4 EpochCred k=1",
+  "txHash": "0x779fd0ae971e6ce615e660b710cbb5d52af5aad81d44400a944514355213090a",
+  "block": 94,
+  "gasUsed": 85450,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=4 EpochCred k=1",
+  "txHash": "0x10014c59d2a706f896f7fd117a88bc13701746bc82b9b076a29afbaa64f2e0b5",
+  "block": 95,
+  "gasUsed": 68350,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=4 EpochCred k=3",
+  "txHash": "0xf5ead3aa9f3d329b431d3dae73be0f12dc8e924f6fc124b260100ef062c54179",
+  "block": 98,
+  "gasUsed": 99160,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=4 EpochCred k=3",
+  "txHash": "0x524f750e1dc8e90ee22a84269565bcb24384d5ad787947a583cd629641bcd993",
+  "block": 99,
+  "gasUsed": 82072,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=4 EpochCred k=5",
+  "txHash": "0xed95a6115c0098b33dccd1dbac6eae7dbd89d5ca971327955db4af51cf034e07",
+  "block": 102,
+  "gasUsed": 112870,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=4 EpochCred k=5",
+  "txHash": "0x3f2146c5a11fa5d4c17deb8a0770855587504da6ec5ceb27fa9c472f88991639",
+  "block": 103,
+  "gasUsed": 95794,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=4 EpochCred k=3 full",
+  "txHash": "0x9cb3269ec1c3cb36727dd4a2ed5e491f4a2a38129e2520d4189f41d4565751c5",
+  "block": 106,
+  "gasUsed": 148591,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=4 EpochCred k=3 full",
+  "txHash": "0xea8a43cbe44287d5a6582062aa184a42c967a1292b3f5532f3bafe430e74b29c",
+  "block": 107,
+  "gasUsed": 151391,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=8",
+  "txHash": "0x30d784e275f83df64f6b05a5c28fe589c54c348232d3ef3be6846098e4e943c4",
+  "block": 108,
+  "gasUsed": 210941,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=8",
+  "txHash": "0x805abc70348650f78e4db747f0b6e89f25d815ff75522ecdfc5839f717dc7440",
+  "block": 109,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=8",
+  "txHash": "0x78b30f9e983a2452dbe171d3eccfd71f9e047888a4774817c0f2fb48d485f0d2",
+  "block": 110,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=8 B4",
+  "txHash": "0xb0793a4983150b4133c35b072d9150bf5eb6289cd8fb51eb80ad5f87b90a4c00",
+  "block": 112,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=8 B4",
+  "txHash": "0x424d73dd31e98b79a2df4e77652d9e462247bbde7846aac4f651d6cf7421907b",
+  "block": 113,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=8 EpochCred k=1",
+  "txHash": "0xec2c6fe0d1fe6f11ce06af182098c1da128a4921acc128d4148d8d0a7eedf25f",
+  "block": 116,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=8 EpochCred k=1",
+  "txHash": "0xe44311742fca87717b71afebbf02b28c084bbe6f5c67144a90f1a9d4269856a6",
+  "block": 117,
+  "gasUsed": 68362,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=8 EpochCred k=3",
+  "txHash": "0xdc7dcde50696beba9f605580555e002f5723518a36a6aaf10a7d0cb18326840a",
+  "block": 120,
+  "gasUsed": 99160,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=8 EpochCred k=3",
+  "txHash": "0xcd1bb326b446e652107fd8319fcb8c628993e3b1bca404e6fb12b4da4f01292d",
+  "block": 121,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=8 EpochCred k=5",
+  "txHash": "0xe1b7b70b568bc170bff0259be4dc7c812d5c4bd66b7fd703baba03e2bda5ee83",
+  "block": 124,
+  "gasUsed": 112882,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=8 EpochCred k=5",
+  "txHash": "0x248bf5dc65562fa8777ba9af3167d85597b32df029dbdecd8054f7251e73b91b",
+  "block": 125,
+  "gasUsed": 95794,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=8 EpochCred k=3 full",
+  "txHash": "0xde8bf2d57c688a015f8dab92282dcbe64be2657f5e7aa1dbe887e5c8153b0eb4",
+  "block": 128,
+  "gasUsed": 148603,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=8 EpochCred k=3 full",
+  "txHash": "0xb8e5e1433d4e9556ec1ded41c82e5f746468fb8f617e302d775fb365f32c0ac1",
+  "block": 129,
+  "gasUsed": 151391,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=16",
+  "txHash": "0x551d96340310ff8598e39185f22fea8d9c165170ebca8c66b6c07bbe8465fac2",
+  "block": 130,
+  "gasUsed": 397897,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=16",
+  "txHash": "0x89c3bd3baa4b7bdc3333bd6c65241015437ba711c8089d7bf4225a5a5b481fac",
+  "block": 131,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=16",
+  "txHash": "0xb814f3d9f304368952b6c9acd6000094f50ca061f11eb27f819756bebdc8e5d1",
+  "block": 132,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=16 B4",
+  "txHash": "0x6e10c1baabb50c9c61799058b7ebdd9a7f3fb127b34f9dfb7982dd0bb9e80d56",
+  "block": 134,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=16 B4",
+  "txHash": "0x67b81ec3b59c9dbbb5e55d48d7650ea4de0d5f12d6eade534bfc62bf4a8d6154",
+  "block": 135,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=16 EpochCred k=1",
+  "txHash": "0xd69b9eff07a10780b5450c283bc2a96a5c9eeb4d64b05df2863223c4908f55c0",
+  "block": 138,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=16 EpochCred k=1",
+  "txHash": "0x18a3a38b13c0a3bbcc2674a60f4060a7c911de508baafd9fb503c5ca7c55413f",
+  "block": 139,
+  "gasUsed": 68338,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=16 EpochCred k=3",
+  "txHash": "0x161f4174a4ebb1f2e68a4e5e3b5abd33f5446393ab28e06165cb90d1d5bfde0e",
+  "block": 142,
+  "gasUsed": 99172,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=16 EpochCred k=3",
+  "txHash": "0x9b21592ced01bae6345e4ff7108099a4645f62dd6cb93c05f7920b56c372c9a6",
+  "block": 143,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=16 EpochCred k=5",
+  "txHash": "0xec4c5a0a79c67e6df6350d515105a63b8321570e88f213b72d4adf3985cba51b",
+  "block": 146,
+  "gasUsed": 112894,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=16 EpochCred k=5",
+  "txHash": "0x17718ac1e84121d17090df805405e71080dac0bfa4584d77f304419f39a51009",
+  "block": 147,
+  "gasUsed": 95782,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=16 EpochCred k=3 full",
+  "txHash": "0x98c45c8441985240c031e9e9a2d712eebbee1416edc220767de75f6a411acc5e",
+  "block": 150,
+  "gasUsed": 148591,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=16 EpochCred k=3 full",
+  "txHash": "0x8a0e7748215f5079d77bbb59f7cd9a30d5bf4f7ea3bc4e666d4eda74c0beb313",
+  "block": 151,
+  "gasUsed": 151403,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=32",
+  "txHash": "0x63a08b7bddefea356c1b186a4fec840b7004f1698d7264af69955e9599737966",
+  "block": 152,
+  "gasUsed": 771791,
+  "calldataBytes": 1092
+ },
+ {
+  "ctx": "E1 B=32",
+  "txHash": "0x15bf8d00eaf71b171710b31295fe386e5a08daf50d7be66761c04ca1460c2cf3",
+  "block": 153,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=32",
+  "txHash": "0x684d6d6925d7557d6ace090bc08f0a9694939c6db2821ba6bd43ca3c9af8178c",
+  "block": 154,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=32 B4",
+  "txHash": "0x6f12d1b23985b72433f5d62a69f7aeab5086287fe6dce782fe1e9d56460c8d3d",
+  "block": 156,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=32 B4",
+  "txHash": "0x85c8357a088e039f6318a757c25b64ea5cd85b0aa43b73c54a2eaa100cffb577",
+  "block": 157,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=32 EpochCred k=1",
+  "txHash": "0x8523561610d6971c0cb97e991d36ba081918a543b84a5445191ea22a9989a6ce",
+  "block": 160,
+  "gasUsed": 85450,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=32 EpochCred k=1",
+  "txHash": "0xf544ae9825e4bc6913d7352aa62420772b2375bd11497499dc4eb6889678c59a",
+  "block": 161,
+  "gasUsed": 68362,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=32 EpochCred k=3",
+  "txHash": "0x03ec8c272a00b33a4fa20e6c80c276a64ffbc0426adacdeb7eb7de839ed081db",
+  "block": 164,
+  "gasUsed": 99172,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=32 EpochCred k=3",
+  "txHash": "0xb74d4b2a163047893980d4a082afd7c4285ab531f099248188a2488580fea158",
+  "block": 165,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=32 EpochCred k=5",
+  "txHash": "0x7943d32eea30eee6d88f688b656305aae383358dfffa7c0744c0a1f65a673cf5",
+  "block": 168,
+  "gasUsed": 112894,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=32 EpochCred k=5",
+  "txHash": "0x52b99bbfb64d36af3100f761282ee04bb63570f496d92668eae19e1e812db9b0",
+  "block": 169,
+  "gasUsed": 95794,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=32 EpochCred k=3 full",
+  "txHash": "0xd71f8244329af0da3aa2ccc290549bef3298cb35fd5d4d53ee5b39ce3cb7246e",
+  "block": 172,
+  "gasUsed": 148603,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=32 EpochCred k=3 full",
+  "txHash": "0x4535f3a28e7ed68d4e16de069e04f88873ab286a8e50e16d7150aa0316dd2643",
+  "block": 173,
+  "gasUsed": 151403,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=64",
+  "txHash": "0x6da6378171c7a369be2250c45a8910dbaa1c5160d03d32ec3f7ee410d5f72d50",
+  "block": 174,
+  "gasUsed": 1519559,
+  "calldataBytes": 2116
+ },
+ {
+  "ctx": "E1 B=64",
+  "txHash": "0x548bbac11fae8e179e1a73f549eb36fd58bf54659ec4ee08e67d552bc23d284c",
+  "block": 175,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=64",
+  "txHash": "0x3efd4e9742326b3b2d75c0210d3b5a357d9f63ad4694dc05f2b1a22324e79ddb",
+  "block": 176,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=64 B4",
+  "txHash": "0xe845c097a2372702c1b3ca771868f6a6ac4fc1b5810482b6f6f86021e2e3029f",
+  "block": 178,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=64 B4",
+  "txHash": "0xf99ca76c4b704c6c52c6ca850d6da29a54cbf6473a44f50742b960c0f7733758",
+  "block": 179,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=64 EpochCred k=1",
+  "txHash": "0xa0b56647d994fc09cc149aa60acd76f3cd9f8ae7c7c7c7c46798d7d3de44703c",
+  "block": 182,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=64 EpochCred k=1",
+  "txHash": "0x463ccc98a15c90ed505dc7853395f89059ba2ea47e0c07926e6d47309abbba60",
+  "block": 183,
+  "gasUsed": 68362,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=64 EpochCred k=3",
+  "txHash": "0xc9743c2bc9e824bb8c026e1f8bb57feb464cc21be434f952045ef1db18045f59",
+  "block": 186,
+  "gasUsed": 99172,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=64 EpochCred k=3",
+  "txHash": "0x3a69e723f686d4eea9f94ada00a63e3489d36878c17c115a38ac5ddaf8e81d26",
+  "block": 187,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=64 EpochCred k=5",
+  "txHash": "0x0335322d94744f52d33d13d6caa7a42cf6ba6d3b2f9a9d6921550b82a7c0b12c",
+  "block": 190,
+  "gasUsed": 112858,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=64 EpochCred k=5",
+  "txHash": "0x2b1f9985d26059e5c7613ccd07bc4ee9ba6da51cf13c3e0871c62a8d95283326",
+  "block": 191,
+  "gasUsed": 95782,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=64 EpochCred k=3 full",
+  "txHash": "0x4eaed62f34d77819c7904760813678634b442fdb1dba08dced95b75bd0758511",
+  "block": 194,
+  "gasUsed": 148591,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=64 EpochCred k=3 full",
+  "txHash": "0xc54f442121c2fcfbf373e73d12c7789541d11b97b223d41e93cd73f43778cdf6",
+  "block": 195,
+  "gasUsed": 151379,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=128",
+  "txHash": "0xf0af841c903e32218263de6b09e1d3e9ebaae70534024fc8ad3157af9f6c9a42",
+  "block": 196,
+  "gasUsed": 3015382,
+  "calldataBytes": 4164
+ },
+ {
+  "ctx": "E1 B=128",
+  "txHash": "0x95a178e78fdfe2801d7677b5cb7679b87bdc6631145219b6bbc1c5c55aca95b7",
+  "block": 197,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=128",
+  "txHash": "0xeac6954c91cfa671bf447105126b50d4f7e0fc77e1a93c141b34c49e5510f6af",
+  "block": 198,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=128 B4",
+  "txHash": "0xd73b20c6d4689f15c14a5568c28ca2aa663c66515a91a449268e791c7d34087c",
+  "block": 200,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=128 B4",
+  "txHash": "0x6ad56be89cd08b37f9fe6a0cdf19fdce374215c0d33dad576afc7af8dca2a7dd",
+  "block": 201,
+  "gasUsed": 60633,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=128 EpochCred k=1",
+  "txHash": "0xe1ecf9a1ca246531a767c2f02b904996193112e017508f9ef6fc7ce0201ead1f",
+  "block": 204,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=128 EpochCred k=1",
+  "txHash": "0x127bc05b87abb64c12642ecef302dbdd1275ef05d0a5a7ad341194d5c9f8011d",
+  "block": 205,
+  "gasUsed": 68350,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=128 EpochCred k=3",
+  "txHash": "0x4b9364ad2ed4d4cae77e32131f75268c4d4acb70cdffdd0bd0d8ed9229e0cc96",
+  "block": 208,
+  "gasUsed": 99160,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=128 EpochCred k=3",
+  "txHash": "0x49c32d48b6b0c01cb0f8be96f4b7098b71f29c2316c12b4c0294336bda8ec437",
+  "block": 209,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=128 EpochCred k=5",
+  "txHash": "0x8fe5de8b43f95b32e104f229de55f2171ae63a074c5b1662a4faa9f4a6b4394e",
+  "block": 212,
+  "gasUsed": 112894,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=128 EpochCred k=5",
+  "txHash": "0xf89b9e7dc1d144f002c3c6b8692b79a1436451cf345ec93d662a0208f52700a7",
+  "block": 213,
+  "gasUsed": 95782,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=128 EpochCred k=3 full",
+  "txHash": "0x7cb514a827b9744c536bc28cdb294d5d936ade315af69eb59b0394caa351faaf",
+  "block": 216,
+  "gasUsed": 148591,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=128 EpochCred k=3 full",
+  "txHash": "0xa2e16db4afcf9492a1f94a32a8a01fada87ff5ed886016f594b86423bced1091",
+  "block": 217,
+  "gasUsed": 151403,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=256",
+  "txHash": "0xf2f45be7cde1fe74996676548c21a33c59dc2e56ffed93625d0c0acc061b519e",
+  "block": 218,
+  "gasUsed": 6007172,
+  "calldataBytes": 8260
+ },
+ {
+  "ctx": "E1 B=256",
+  "txHash": "0x6e2da50d770da6c2f4c590842c0dc75420e2aca586f23eaf04bb056589d3bd62",
+  "block": 219,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=256",
+  "txHash": "0x42962b4156622253191fd54b52cc08a5292b3efa996406b20f843ab539c4c57c",
+  "block": 220,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=256 B4",
+  "txHash": "0x0becb80327011823c86565e50dc29008c951e5de4d0a17252b5ba375be4000e8",
+  "block": 222,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=256 B4",
+  "txHash": "0xb3e1aa3672a76848319a6a3ec3c32100c3e2d0b843586c67914af56168c87806",
+  "block": 223,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=256 EpochCred k=1",
+  "txHash": "0xf8865d29bb662404894e173f1ecda569044e3776949ac28584e1093efac4f131",
+  "block": 226,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=256 EpochCred k=1",
+  "txHash": "0x8f15e15c2fe1bf909b642b0e92ccf2b7917bf00373053a5eeb3e157bc0a5f5aa",
+  "block": 227,
+  "gasUsed": 68362,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=256 EpochCred k=3",
+  "txHash": "0x58fde399994bde3220d83abab969ec2bf26a8cb4e4283aed2337f637d0e0a09b",
+  "block": 230,
+  "gasUsed": 99172,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=256 EpochCred k=3",
+  "txHash": "0x423fbd270e08d88946a35050a81871234b80af1c1714700073a0c40e559c5e66",
+  "block": 231,
+  "gasUsed": 82048,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=256 EpochCred k=5",
+  "txHash": "0x67eec5d9aaf93604be0169f6bc12cb11b81fe0307efe1858fc38c8ca6aeed4af",
+  "block": 234,
+  "gasUsed": 112882,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=256 EpochCred k=5",
+  "txHash": "0xae508a337924312ce966a0ee0ec50da38b9d90742215ab6ce2aad62158fb7314",
+  "block": 235,
+  "gasUsed": 95770,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=256 EpochCred k=3 full",
+  "txHash": "0x016f75b779eaafc327ee98c9a039bc63986b09f6d41eaeab3b89ba5a088ab48d",
+  "block": 238,
+  "gasUsed": 148579,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=256 EpochCred k=3 full",
+  "txHash": "0x14161f38fbaf48fe03fc93fb1784c8dcc1cf04fc0918ac69c5056ec1a48aa80c",
+  "block": 239,
+  "gasUsed": 151379,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=512",
+  "txHash": "0x37c302105101d781bc85dfe1aab3eef30b3c5e960298e19d27b35df187380180",
+  "block": 240,
+  "gasUsed": 11992744,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E1 B=512",
+  "txHash": "0x4b74af756878e547ddb8e53a9b4f568184bccc1b0d541be1aaaaf91a768bd377",
+  "block": 241,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=512",
+  "txHash": "0xc9557848982b9b6a3e9b0a086c3659772edf1223d69fe61a89aef9c41d514930",
+  "block": 242,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=512 B4",
+  "txHash": "0x264503a0f69564f1d397ecd93414775245ad2e0d4e91414d22c432954ca8394b",
+  "block": 244,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=512 B4",
+  "txHash": "0x136150de6abd1a1dea1f4c8621cd9ce678cca7a270db9076d532e6ff15a350b7",
+  "block": 245,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=512 EpochCred k=1",
+  "txHash": "0x15878178ddec12ba34d39beaec5dcfa5f3cc1f2e70e79d6b5d5fe4382c742209",
+  "block": 248,
+  "gasUsed": 85450,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=512 EpochCred k=1",
+  "txHash": "0x52f0d3293c4ee4d28341a070bea1b434eda799ca9807d89f49a6104039e1e1d3",
+  "block": 249,
+  "gasUsed": 68362,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=512 EpochCred k=3",
+  "txHash": "0x85e0669877c063858d1a1b8d17e3b12308ef509778c31e425bd50b31facb329d",
+  "block": 252,
+  "gasUsed": 99172,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=512 EpochCred k=3",
+  "txHash": "0xb656848482ecf1d24ea16d984844f16f42b68d711dc81a2108f4f0fbf12fa767",
+  "block": 253,
+  "gasUsed": 82072,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=512 EpochCred k=5",
+  "txHash": "0x25216f4b880c12a7e92255237b327dc0220debfc9821ac667debfb4431c284c1",
+  "block": 256,
+  "gasUsed": 112870,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=512 EpochCred k=5",
+  "txHash": "0x75fb0aeb99c826eb3f7b452d8db179487a89489de1956aed135ab0fa0bcd59f1",
+  "block": 257,
+  "gasUsed": 95770,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=512 EpochCred k=3 full",
+  "txHash": "0xcf4874065f7dc820f235c8da43e623fc3622bebcec84038003fc3b3dd5b0c76d",
+  "block": 260,
+  "gasUsed": 148603,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=512 EpochCred k=3 full",
+  "txHash": "0xd0139faeaa0108f93cea90b17bd6f2de783735d9df56ec326676c0ffe07b0e4b",
+  "block": 261,
+  "gasUsed": 151391,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=1024",
+  "txHash": "0x732876060262edcc246c80380c164001336130413861c46f74c2dc817092a9e0",
+  "block": 262,
+  "gasUsed": 23970920,
+  "calldataBytes": 32836
+ },
+ {
+  "ctx": "E1 B=1024",
+  "txHash": "0x245a36d9687822e2c18018c74d1d1c5dfb7d353d59d8b11a725db00f506f093b",
+  "block": 263,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=1024",
+  "txHash": "0x93e7546bc46c866a920e22921f57f9075c84b4b4f0a23443572d43935ebfd0fe",
+  "block": 264,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=1024 B4",
+  "txHash": "0x35f342e6d782fe67f3f66b2865b5e99d5c14a092fcd32c50bcdf4e6a73366c9c",
+  "block": 266,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=1024 B4",
+  "txHash": "0x54451dbbe6ab51c65368c342de1ba596003d2deebfdfef457f4d2f2ace778456",
+  "block": 267,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=1024 EpochCred k=1",
+  "txHash": "0x6099f4cd5e673372f01c11b98124de3ad92e4ebcee0a0308727b774ccb93427c",
+  "block": 270,
+  "gasUsed": 85450,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=1024 EpochCred k=1",
+  "txHash": "0x858583578ec6139a83ed196c2c89826ff476ee782226b9eeb1532c795b55df5c",
+  "block": 271,
+  "gasUsed": 68338,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=1024 EpochCred k=3",
+  "txHash": "0x2c14381bb014c55d31c991d5dd643c86587f16661733d76104e8e5a36c95e706",
+  "block": 274,
+  "gasUsed": 99172,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=1024 EpochCred k=3",
+  "txHash": "0x995334eb85bfa2c4fd27d14f7d3d0f4aee33c8a62d4d87efe4917ffa4e6c0bdc",
+  "block": 275,
+  "gasUsed": 82072,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=1024 EpochCred k=5",
+  "txHash": "0x0818e2cdcda108cc3485fb9d9baaac942f0aa01303383d07468087492aa04095",
+  "block": 278,
+  "gasUsed": 112870,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=1024 EpochCred k=5",
+  "txHash": "0x167f748871b72e6538e59e920ca21004073432d6fab2c5e7402c978ad6a95a72",
+  "block": 279,
+  "gasUsed": 95770,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=1024 EpochCred k=3 full",
+  "txHash": "0xf530c449bc6fcfba41f2472d616a986c44d32f48a3442d7446bffda8c849d225",
+  "block": 282,
+  "gasUsed": 148591,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=1024 EpochCred k=3 full",
+  "txHash": "0xd3523dcf6ea0f63a26a8ff764d8f5f78c628eff6739c6557af7eb705285d6b46",
+  "block": 283,
+  "gasUsed": 151403,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=2048",
+  "txHash": "0xa698c90eb8002da7e1598d1de93c218e1f79312928b8513bc298dc6bda33c40a",
+  "block": 284,
+  "gasUsed": 47954788,
+  "calldataBytes": 65604
+ },
+ {
+  "ctx": "E1 B=2048",
+  "txHash": "0xddb4ee75601453c08b2c27c789a46f0381a02322ed0411774b5541d809b41b60",
+  "block": 285,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=2048",
+  "txHash": "0xcc83b095a4d180ce686db0e0f5b5ae483ba07f8c0b4f0d7a23e73d2f4d2ab76f",
+  "block": 286,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=2048 B4",
+  "txHash": "0x29851711a31e0fb448c5fa4d6a8b5887d403254c51435e64a378a21272c45834",
+  "block": 288,
+  "gasUsed": 94833,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=2048 B4",
+  "txHash": "0xa240a9ec98c34b073a81b3a731fc940f30cbddabfe1cf3f0137e9d263c221804",
+  "block": 289,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=2048 EpochCred k=1",
+  "txHash": "0xc2c21a0074d36444d79fc9e60cfdb8ff4e1b0bc095a4a98f5809d6187a4e9e60",
+  "block": 292,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=2048 EpochCred k=1",
+  "txHash": "0x157229be5d56f8d08b457ec31844e9d078abd85ecb411519ea2e8cc49e25ace9",
+  "block": 293,
+  "gasUsed": 68338,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=2048 EpochCred k=3",
+  "txHash": "0x0b1cb622afd09d6c4e8b9eced2c562cf06339774e1e005362f6cb5eabb9b3c53",
+  "block": 296,
+  "gasUsed": 99172,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=2048 EpochCred k=3",
+  "txHash": "0x15a8c1f6199986ce7f9999234d0bd0a9f212a958c26d6c97224f05b05b401ef1",
+  "block": 297,
+  "gasUsed": 82072,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=2048 EpochCred k=5",
+  "txHash": "0xbf1aefe426a3ac7306e666bc4cf3a504b4503325dc815141b07c4014aba8197c",
+  "block": 300,
+  "gasUsed": 112882,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=2048 EpochCred k=5",
+  "txHash": "0x404fa0b2e885cd3b29e831277c8c183f20906fa1dc3252c09c80475ace20c418",
+  "block": 301,
+  "gasUsed": 95782,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=2048 EpochCred k=3 full",
+  "txHash": "0xeecb850c683a748171447195eb48f71f18e0bdf670d14b7ccf82f267182dcb21",
+  "block": 304,
+  "gasUsed": 148603,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=2048 EpochCred k=3 full",
+  "txHash": "0xb2db277c394eb327e5d3c0195f07b6ced97bd1733d1d00c974d716fdff6321b5",
+  "block": 305,
+  "gasUsed": 151403,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=4096",
+  "txHash": "0xb296ce56671803813f37c192559058ecfcfec57a1deacd183fc201895bbce13c",
+  "block": 306,
+  "gasUsed": 96032252,
+  "calldataBytes": 131140
+ },
+ {
+  "ctx": "E1 B=4096",
+  "txHash": "0x2e80ae0036b0d272a7e310034e5ffdc3111fd97cdac1217c61f9d989e583d192",
+  "block": 307,
+  "gasUsed": 46439,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=4096",
+  "txHash": "0xa9d83a98063a6255b4c61e45d42492518c4ea512aaa30bcd4adc2d8402e7bfe3",
+  "block": 308,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E1 B=4096 B4",
+  "txHash": "0x1185ca7b1a9c98f0e5b3801d9661b602befd176e8a4eba59c0b68b33176b65d5",
+  "block": 310,
+  "gasUsed": 94845,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=4096 B4",
+  "txHash": "0xabcc3c12b7cd34631505b83c9992d1b5012838e8b464b06e236ab4395adbe47d",
+  "block": 311,
+  "gasUsed": 60645,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E1 B=4096 EpochCred k=1",
+  "txHash": "0x438380051c6c59091c8e083c46e43f602defe20e4b674f61a8dbe37ff55e8fa3",
+  "block": 314,
+  "gasUsed": 85462,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=4096 EpochCred k=1",
+  "txHash": "0xb5d7786dac42cd806376ee688fb1c07b1f1b187d826b957328290dea18360692",
+  "block": 315,
+  "gasUsed": 68362,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E1 B=4096 EpochCred k=3",
+  "txHash": "0x93254d595b8179410f034601c710ae002d994ac5edf116e73673aa2e5f830de3",
+  "block": 318,
+  "gasUsed": 99148,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=4096 EpochCred k=3",
+  "txHash": "0x2d4f7b200bf259b7f4e38eecd6c01d0d979c255a8650932eee7829838a70e8e8",
+  "block": 319,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=4096 EpochCred k=5",
+  "txHash": "0xbdace1d78df015f29b434f5fa639dd457ea126ea221ff875bf6cd598e77ba62f",
+  "block": 322,
+  "gasUsed": 112858,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=4096 EpochCred k=5",
+  "txHash": "0x7c74909c3a229203194b7fe14d0e80daec25615805cd36bb1f6da8b6e8f2b8a0",
+  "block": 323,
+  "gasUsed": 95794,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E1 B=4096 EpochCred k=3 full",
+  "txHash": "0xb391796b3ef3f09d6fd66c0346a0fb06ba109c7a20baa84ce419c75fb508e847",
+  "block": 326,
+  "gasUsed": 148591,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E1 B=4096 EpochCred k=3 full",
+  "txHash": "0x524ae7f29ce92f8d7098f8b86c4727fba6412c33821daa1618450200d3197e8d",
+  "block": 327,
+  "gasUsed": 151379,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0x063b7888d23d3f9432af10aa7111c57e726818381193f54823ce8b557f9372aa",
+  "block": 378,
+  "gasUsed": 11992792,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0x60f240fa836e5c8fa1952f151ee0aa138294d2b08d3e3be6af2527cec15a7d28",
+  "block": 379,
+  "gasUsed": 11992840,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0x567e0023771474e781f531cfa712d76e1acaebeac0c8488adf5b8de2772b3701",
+  "block": 380,
+  "gasUsed": 11992708,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0xc8fb226762a3b2cfdf9079b214464f9bcc36defe131c29b0eb878e01baf49899",
+  "block": 381,
+  "gasUsed": 11992864,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0x75cef1000bb6476f8a023d67ef747b8259bde91625bdc6781db97e92b1d58496",
+  "block": 382,
+  "gasUsed": 11992852,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0x3cadcee35f5df021432036e46a7198a448abaa3f883270b7ec9b49af401408b4",
+  "block": 383,
+  "gasUsed": 11992780,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0x152f326a1d99a79a939f9558fe02354cbdebed5c7d1c695d90d16a7af50d8163",
+  "block": 384,
+  "gasUsed": 11992660,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0x8592c9707d13f7167f14e36120de56a4bc389a137593ae7bbd4c1213ea579d47",
+  "block": 385,
+  "gasUsed": 11992744,
+  "calldataBytes": 16452
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0x58e7e4c62b1950d322d3d8660fb1087f291e910751f043b11b01985ac1a57609",
+  "block": 386,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E2 k=10",
+  "txHash": "0xcbe65ed4c3650953fdb014850bee9915a67632ceb819b2762620211d75359db9",
+  "block": 390,
+  "gasUsed": 94461,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0x90a6c064d3030773e3153edc8956c981fbf18973813afdc2c8c57b25c945f38c",
+  "block": 394,
+  "gasUsed": 27167,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0x3c83b2024c0b362259d98e4229ae6205bddc00ff0b17e77fe4f4319cb1814726",
+  "block": 395,
+  "gasUsed": 46894,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0x4d54c80345bd91f3fd8f4e3e757d95de4bf573702de5b74c554eefef62ddc684",
+  "block": 396,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0x084ab7764f1d695186508344ab3bedbc02c07e269fcf59b3657b6e52cb38c776",
+  "block": 397,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0xfcd1f09bc3f992dfb950adec687970910642dc5a8b899d0c33c14e7371bc2e19",
+  "block": 398,
+  "gasUsed": 47225,
+  "calldataBytes": 132
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0x5a59d34c7a35f65679d82e92c7ef117d3d60ee13cf3b024a7c8378c64c553973",
+  "block": 399,
+  "gasUsed": 47793,
+  "calldataBytes": 228
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0x84a183f457830068ebcf8592225c102b6c8a4f2adb54b592986de0201990aa46",
+  "block": 400,
+  "gasUsed": 60249,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0x39f35c6e3a6864fa084fb9c3ca193a3e4150dd540eec8b8b656e3561c68e91a4",
+  "block": 401,
+  "gasUsed": 82024,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E3 r=1",
+  "txHash": "0x2439b02458a68ff0628bc2ab043d184c802ff9db130d7be58f614accec90520b",
+  "block": 402,
+  "gasUsed": 67966,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0x9ab2c82edd99142fc3dd823fb25dead93641c823b6137eee86ef258a7f82414b",
+  "block": 403,
+  "gasUsed": 27155,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0x8eccd8e169d050c8713d2fdf18fb441c259b41fb75b8c107e6e0cb37054031d8",
+  "block": 404,
+  "gasUsed": 39960,
+  "calldataBytes": 164
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0xaab2be74c42cf120053e8b38da18a29d97cc5efc761196d3d13731a958774474",
+  "block": 405,
+  "gasUsed": 115378,
+  "calldataBytes": 196
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0xe68fb4e9ae0dfd6c7ff30fa94706abb6d335064c6e9609d2b86722eeea68bba2",
+  "block": 406,
+  "gasUsed": 46405,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0x400423ae835bbc27e5a97723c6eb987fac91148d17e1d96b855c10a6a17df0fe",
+  "block": 407,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0x4f663d605cae27ae7d694706f12eaa9acd2b762a362d5f4ca951ad8d9ad6254e",
+  "block": 408,
+  "gasUsed": 115040,
+  "calldataBytes": 228
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0x64db4c18de9d7c692a14f8bbb51e370ec772dea5cef30546de30e6aeca8a60ad",
+  "block": 409,
+  "gasUsed": 115914,
+  "calldataBytes": 420
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0xd2150709dbf61f290439d7381c7187fbc584e32830a477118111b41bc4616bd7",
+  "block": 410,
+  "gasUsed": 60237,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0x023c035e3c7ae534ed5875c3aa759287d184ce4fba59fce9a67ff9b5eacce86d",
+  "block": 411,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E3 r=4",
+  "txHash": "0xd50d137cee462fa5ecb46d97051f73d065e1a621991db1044bbdb91e12c34ede",
+  "block": 412,
+  "gasUsed": 67966,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0x267d2292d7576129c7cfcfe526fc05c46a5b533e3e00954b0ef7f8ae2a0ebbd5",
+  "block": 413,
+  "gasUsed": 27167,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0x06e77a9ae4788f8d6041e45417517495ed1d9de76308e8afd67de868c7402846",
+  "block": 414,
+  "gasUsed": 112428,
+  "calldataBytes": 548
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0x68d9aaacc7f83398d863b3b7f9bdc2d5e3c7f951653de5f8b42ae22254f4b20e",
+  "block": 415,
+  "gasUsed": 389398,
+  "calldataBytes": 580
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0x5662827040e027de528375d7b18bc21eca902925de192f7aa4acdc332067b901",
+  "block": 416,
+  "gasUsed": 46405,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0xf2bc0d13012adbb0226587c5080986a17859b53004a5d371723deb24669ca14d",
+  "block": 417,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0x188b2d32dec05d680ecd9560b193b22692d44ba50bc93aa6ebbea1ed14bb9a6a",
+  "block": 418,
+  "gasUsed": 233036,
+  "calldataBytes": 612
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0xdefd3d3079868e5dc9954dced1ff1b54e8fbd75c6eeaf1150a6c9a765a423a1f",
+  "block": 419,
+  "gasUsed": 229533,
+  "calldataBytes": 740
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0xc2915ff6fc8220618e5e3eda46f568d5dc7e2d46f48becd2145bbc3a78f0caa0",
+  "block": 420,
+  "gasUsed": 60249,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0xd12f0eb5d5ad586fc090d492210f6022111934bfa65faaf2c6686819858b06ce",
+  "block": 421,
+  "gasUsed": 82036,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E3 r=16",
+  "txHash": "0xe56093e05ff8de83200454cebb144ff2f07d2f5b95fe160ee3dd3555b3ac5532",
+  "block": 422,
+  "gasUsed": 67966,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0x1721b882f1fb4a4ecc0a881780a4815f5122a7b38b7cf04f7fb06f08e610b54c",
+  "block": 423,
+  "gasUsed": 27167,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0xa1d2f4884525716322c715a4fe459b715d998852fc8c344bb70b7b30872e38fc",
+  "block": 424,
+  "gasUsed": 402300,
+  "calldataBytes": 2084
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0xf32680a8dbb0740980473dd08a1921afbd623692470374907c67e425bbbfa7f7",
+  "block": 425,
+  "gasUsed": 1485430,
+  "calldataBytes": 2116
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0x2b6f6739fe03fe923a78cedd9c83af0b3f912081d416d149e1b306b9275b7db0",
+  "block": 426,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0xe9d20f6bf473d063d75dd4e434dd43d9c787e3a6c8c9c6b931255d8a3ad4baeb",
+  "block": 427,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0x0b0c8e985b5100db970fbc4763d72ff6d782fe552c58d2e55de5f7f226a4241a",
+  "block": 428,
+  "gasUsed": 420344,
+  "calldataBytes": 2148
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0x7d4ad03f54a2d9fe6e4d3dc3d218be8638cc38c0c610392943054f9181994d9e",
+  "block": 429,
+  "gasUsed": 388938,
+  "calldataBytes": 1188
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0xac53ae93514da06b6fa4a4031a0fb18a53b49851b6ae92d78131721b5419342a",
+  "block": 430,
+  "gasUsed": 60249,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0xeed57d1681ad33acddab74247bded6304287ccb2be858e6a9c36b4e430177e83",
+  "block": 431,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E3 r=64",
+  "txHash": "0x39fb62ea14aad1a403ee281800a24fa6a7a93a7f779931fa286fdbf3bbf3a478",
+  "block": 432,
+  "gasUsed": 67966,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0x9729b63fc67e97e0a1f20b3152b278e2b9b47ac8dec5a8f41fc4cacab6826d88",
+  "block": 433,
+  "gasUsed": 27167,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0xb7fff1fab520fc26e7d117f682c9c5f1c0fc745618bc365bd7e7628366cea759",
+  "block": 434,
+  "gasUsed": 1561956,
+  "calldataBytes": 8228
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0x9b65e5b34bdba14e2af491c7baf0e72109e58dc6902435aef85bbc7299a14f53",
+  "block": 435,
+  "gasUsed": 5869726,
+  "calldataBytes": 8260
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0x54d8303ea03966b8281c05ce339b8c3f78b2601ecabb67a41c278bb62b366c82",
+  "block": 436,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0xd82a21c5812926302519e981b6373a01951ea53e84b2c47ae8866ebf9b6a2cf7",
+  "block": 437,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0x59d453a978993dd6e96ba5908d0ef5a80ebbb6e79d42351a72af1379cdde0d0b",
+  "block": 438,
+  "gasUsed": 556328,
+  "calldataBytes": 8292
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0x657e6f01d6c367d85088f3993ef7d7e2334e930ceca44c85f740a1d1e0936ac1",
+  "block": 439,
+  "gasUsed": 390618,
+  "calldataBytes": 1188
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0xdb5a6be7d537a8c2a9ad7c5b55810a1e7102a2c88ee6242187a03ba2d301ad91",
+  "block": 440,
+  "gasUsed": 60249,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0x81de5903265c9794440736123b3104593f21499fb944370e21bd57ff174e07f1",
+  "block": 441,
+  "gasUsed": 82048,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E3 r=256",
+  "txHash": "0xba75f33a82c7c29aa6b95cc5901c6e087d89eb5047bc6c6111795c81697c82d8",
+  "block": 442,
+  "gasUsed": 67954,
+  "calldataBytes": 324
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0xaeb6fd6c620c5d0b9cb83e53845cb16bd2dd38bd453f3b6a5599da531c2e24cb",
+  "block": 443,
+  "gasUsed": 27167,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0x4e1ebbe5676b712518d09ab8f5365dc9b67da4b9751c498280c9255ff9b4726d",
+  "block": 444,
+  "gasUsed": 6200268,
+  "calldataBytes": 32804
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0x9c103d2da5901abc97628043b94f082fe0aecdfd63d6d739eaeb1990c6546a86",
+  "block": 445,
+  "gasUsed": 23406586,
+  "calldataBytes": 32836
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0x097b5a6f991fcb5a9dbcb84588d8fb585501268d2c660f05c9bcb6da92023d52",
+  "block": 446,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0xb8e0010344a4c70738e1d3e31b356a32742523c65e4c99b3b049bad3b47bcc1a",
+  "block": 447,
+  "gasUsed": 46417,
+  "calldataBytes": 36
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0x6cef010a5b06588cfc68aea1c88bb187560dd24272617b2a4318dc776c1a5514",
+  "block": 448,
+  "gasUsed": 1100252,
+  "calldataBytes": 32868
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0x744a1c3c31f5f55dd09f0536fff139f34a29efe2e2995bf030fa7bbcb99ff7c4",
+  "block": 449,
+  "gasUsed": 393522,
+  "calldataBytes": 1188
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0x1d85da5804e613afb2e599c6b533dd5bbdb82da6c65c52691565952b4fb097f6",
+  "block": 450,
+  "gasUsed": 60249,
+  "calldataBytes": 100
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0xa5f7f00fdfab0522630653d7b02ab33e6b00597e5ad17d9ff792ce96f05162f4",
+  "block": 451,
+  "gasUsed": 82060,
+  "calldataBytes": 452
+ },
+ {
+  "ctx": "E3 r=1024",
+  "txHash": "0x6df9107b1ee21badbcb37523443e4402f55ac15e8ec1e8f720e1f7057ad5ee78",
+  "block": 452,
+  "gasUsed": 67966,
+  "calldataBytes": 324
+ }
+]

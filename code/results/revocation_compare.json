@@ -1,0 +1,153 @@
+{
+  "capacity": 131072,
+  "rows": [
+    {
+      "r": 1,
+      "smt": {
+        "proof_bytes": 64,
+        "proof_bytes_mean": 64,
+        "mean_siblings": 1,
+        "check_ms": 0.028851,
+        "mean_hashes_nonmember": 2.07,
+        "hashes_member": 256,
+        "onchain_check_gas": 5017,
+        "onchain_check_gas_naive": 40761,
+        "gas_samples": 10
+      },
+      "statusList": {
+        "proof_bytes": 320,
+        "check_ms": 0.052212,
+        "hashes": 10,
+        "onchain_check_gas": 14357
+      },
+      "predicted_siblings": 0.9999999999999999,
+      "predicted_hashes": 2
+    },
+    {
+      "r": 16,
+      "smt": {
+        "proof_bytes": 160,
+        "proof_bytes_mean": 170.88,
+        "mean_siblings": 4.34,
+        "check_ms": 0.04568,
+        "mean_hashes_nonmember": 5.33,
+        "hashes_member": 256,
+        "onchain_check_gas": 9095,
+        "onchain_check_gas_naive": 43610,
+        "gas_samples": 10
+      },
+      "statusList": {
+        "proof_bytes": 320,
+        "check_ms": 0.055417,
+        "hashes": 10,
+        "onchain_check_gas": 14354
+      },
+      "predicted_siblings": 4.377377901752755,
+      "predicted_hashes": 5.377377901752755
+    },
+    {
+      "r": 256,
+      "smt": {
+        "proof_bytes": 288,
+        "proof_bytes_mean": 297.92,
+        "mean_siblings": 8.31,
+        "check_ms": 0.068411,
+        "mean_hashes_nonmember": 9.34,
+        "hashes_member": 256,
+        "onchain_check_gas": 13587,
+        "onchain_check_gas_naive": 46577,
+        "gas_samples": 10
+      },
+      "statusList": {
+        "proof_bytes": 320,
+        "check_ms": 0.053453,
+        "hashes": 10,
+        "onchain_check_gas": 14357
+      },
+      "predicted_siblings": 8.335563543975303,
+      "predicted_hashes": 9.335563543975303
+    },
+    {
+      "r": 1024,
+      "smt": {
+        "proof_bytes": 352,
+        "proof_bytes_mean": 360.16,
+        "mean_siblings": 10.255,
+        "check_ms": 0.075174,
+        "mean_hashes_nonmember": 11.335,
+        "hashes_member": 256,
+        "onchain_check_gas": 16939,
+        "onchain_check_gas_naive": 48774,
+        "gas_samples": 10
+      },
+      "statusList": {
+        "proof_bytes": 320,
+        "check_ms": 0.052605,
+        "hashes": 10,
+        "onchain_check_gas": 14417
+      },
+      "predicted_siblings": 10.333451762795777,
+      "predicted_hashes": 11.333451762795777
+    },
+    {
+      "r": 4096,
+      "smt": {
+        "proof_bytes": 416,
+        "proof_bytes_mean": 429.12,
+        "mean_siblings": 12.41,
+        "check_ms": 0.085848,
+        "mean_hashes_nonmember": 13.39,
+        "hashes_member": 256,
+        "onchain_check_gas": 19612,
+        "onchain_check_gas_naive": 50590,
+        "gas_samples": 10
+      },
+      "statusList": {
+        "proof_bytes": 320,
+        "check_ms": 0.053258,
+        "hashes": 10,
+        "onchain_check_gas": 14564
+      },
+      "predicted_siblings": 12.33292349878544,
+      "predicted_hashes": 13.33292349878544
+    },
+    {
+      "r": 16384,
+      "smt": {
+        "proof_bytes": 480,
+        "proof_bytes_mean": 492.8,
+        "mean_siblings": 14.4,
+        "check_ms": 0.095747,
+        "mean_hashes_nonmember": 15.46,
+        "hashes_member": 256,
+        "onchain_check_gas": 21943,
+        "onchain_check_gas_naive": 52068,
+        "gas_samples": 10
+      },
+      "statusList": {
+        "proof_bytes": 320,
+        "check_ms": 0.053834,
+        "hashes": 10,
+        "onchain_check_gas": 14978
+      },
+      "predicted_siblings": 14.332791412848426,
+      "predicted_hashes": 15.332791412848426
+    }
+  ],
+  "fraud": [
+    {
+      "r": 17,
+      "gas": 142920,
+      "frozen": true,
+      "proof_gen_ms": 47.724711,
+      "calldata_bytes": 1028
+    },
+    {
+      "r": 1025,
+      "gas": 151380,
+      "frozen": true,
+      "proof_gen_ms": 2806.594325,
+      "calldata_bytes": 1348
+    }
+  ]
+}

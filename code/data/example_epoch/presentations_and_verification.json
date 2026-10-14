@@ -1,0 +1,458 @@
+{
+  "challenge": "nonce:example-verifier-0001",
+  "chain_view": {
+    "issRec": {
+      "issuanceRoot": "0x45f47e97a90410bdee0bd49cb9d1dac4f135ce79c4f449dc1fc379a720813089",
+      "revocationRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "timestamp": 1767225612,
+      "count": 6,
+      "prevHead": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "issDigest": "0xd025ceb4fe9b214d0740978eb584b5bb217a0ea07dede1ed25c9af84ab83fb80",
+    "latestRec": {
+      "issuanceRoot": "0x64416fe08a0471bb5caa2a150a5cae89f152c0bc5a15c8822642558f84731e6f",
+      "revocationRoot": "0x3cdfda9dda57d24587e92f009047b906dc12678513599b0f9adeb0aa8548d0b8",
+      "timestamp": 1767225624,
+      "count": 2,
+      "prevHead": "0xd025ceb4fe9b214d0740978eb584b5bb217a0ea07dede1ed25c9af84ab83fb80"
+    },
+    "head": "0x805817ed769b89fcc7436de1f9395abca1343d65aa639523aacc4d549a9543da",
+    "now": 1767225660,
+    "frozen": false
+  },
+  "results": [
+    {
+      "credential": 0,
+      "revoked": false,
+      "disclosed": [
+        "studentName",
+        "degree",
+        "major",
+        "graduationYear"
+      ],
+      "presentation_bytes": 789,
+      "verifier": {
+        "ok": true,
+        "reason": "valid"
+      },
+      "presentation": {
+        "issuerId": "0x29eb70f61e555909371db2621abb5cd23b7fc0542f4fe0f6a866de5eb4717f09",
+        "epoch": 1,
+        "disclosed": [
+          {
+            "index": 1,
+            "key": "studentName",
+            "value": "Pooja Pillai",
+            "salt": "0x7179309b0672f430892934cbf1dd7dcf318ddc6f2872febc4ce65c12c4a107ee"
+          },
+          {
+            "index": 5,
+            "key": "degree",
+            "value": "M.Tech",
+            "salt": "0xcd61427cc88819d43618cd28fa4235f96ff9eff072a5863dfe021e002ccfc128"
+          },
+          {
+            "index": 6,
+            "key": "major",
+            "value": "Data Science",
+            "salt": "0x1106be55507251ec53710ac01772c659d9ab0d91d7980a47d68ff66b9cc7bebd"
+          },
+          {
+            "index": 10,
+            "key": "graduationYear",
+            "value": "2023",
+            "salt": "0x32536a46159b6e0afd97793eb3cccb69f28fc041234f49ce00037d1d41577615"
+          }
+        ],
+        "attrProof": [
+          "0xe447c201a3076040ea825272d0de0810d47547a8e2eec0407596df51b983e481",
+          "0x7b4e4dcb581bc788fad7e902127e354ff130a9d630ac1ffabbd3a914e8336a8a",
+          "0x056d9bd514f4391c55046f7ede98c8aa2380992b5d1d25c7174f83595b75ba21",
+          "0x2d15cb030c32b1574dd6f0313cbdfb75e7663c810b772c9c643198d91cb73add",
+          "0x482b1053f0e1fc7d466bb1590f5370575d40a95dbb2b52402ee8123c19e7f2fa",
+          "0xd4e9bbbf81735dec4f4b57b927909c28a10f9946708460bf77795605131edba0",
+          "0x8e65f829bd5cdfe96ab15e2169370081895108110fdb832f78408407c26d2328"
+        ],
+        "attrHeight": 4,
+        "holder": "0x2AB01E7f660BA2fBEdCaD24B81eCDa6a4C82b9e9",
+        "nullifier": "0xe72d03be835b62b6fbe5fe49bc4d1b137e1ed267b9baa1e6c5bb20d21406aeec",
+        "validUntil": 2082585600,
+        "schemaId": "0x888e30cb8c59ca14bd5ad0028051d950525380e11331dc1c938498f6c1d89fc1",
+        "leafIndex": 0,
+        "issuancePath": [
+          "0xddcf154abef76f119b0c5510cd8b9ebbd596993e748d31f31f0b029232135869",
+          "0x1412d9b149994c9b861bab7e2a7ec465d2143694dd0b0abdce01e42e3881df32",
+          "0xba537479121b31be17df0bfbaf3e574c4a76e68f4bfd7c7d2d33ccdc8c45abf1"
+        ],
+        "nonRevocation": {
+          "bitmap": "57896044618658097711785492504343953926634992332820282019728792003956564819968",
+          "siblings": [
+            "0x7325f0bbad590a24bd51a377c75c3c755123ca2ba395f4bc0c1fbe98ba1cf5bd"
+          ]
+        },
+        "holderSig": "0xae56d41702da846721a74bf266b32f49145a31a8cf6c997b6a647b2c0fb29ae160aa10586d837b0de063a7226f591bd68e59fb9237f15f22fb0877258bb5679b1b"
+      }
+    },
+    {
+      "credential": 1,
+      "revoked": true,
+      "disclosed": [
+        "studentName",
+        "degree",
+        "major",
+        "graduationYear"
+      ],
+      "presentation_bytes": 791,
+      "verifier": {
+        "ok": false,
+        "reason": "revoked or bad non-revocation proof"
+      },
+      "presentation": {
+        "issuerId": "0x29eb70f61e555909371db2621abb5cd23b7fc0542f4fe0f6a866de5eb4717f09",
+        "epoch": 1,
+        "disclosed": [
+          {
+            "index": 1,
+            "key": "studentName",
+            "value": "Ananya Joshi",
+            "salt": "0x2089195807005f7a32f08b28c02851c5184aee06910c6ad6dfc6acd12c9a412b"
+          },
+          {
+            "index": 5,
+            "key": "degree",
+            "value": "Ph.D",
+            "salt": "0xa704c920f8bfe9b19badda569f6f8dc6687ca0dc0b34a12e911c4dd7e4e971f6"
+          },
+          {
+            "index": 6,
+            "key": "major",
+            "value": "Computer Science",
+            "salt": "0xf92a28a8534a508bc5ded824bdb6da5207170982c1a6fbb8ac9ed842c6247e6f"
+          },
+          {
+            "index": 10,
+            "key": "graduationYear",
+            "value": "2025",
+            "salt": "0x90db06b81440d661b8ee461ee36b0271789bca3cd76027252f1db1d8d29dde5b"
+          }
+        ],
+        "attrProof": [
+          "0x9622da30b27b576ca6dacc725dcd856e029e380627d3756fa9bf18b29063a1e5",
+          "0x2330ba1c8c06ce166122d28ae81d8fdbe9deed2a3849bb724b625856502986fe",
+          "0xd597a23967faedd30caf2c25a137d068d216f83957526cfd6454408a84912c3b",
+          "0x66a2ac7d52ffedabd2da5bf9df805db32a148ef9673ca1c50ba624d8d181e195",
+          "0x15f3aae900ea7e4569f2cb2ee3b4f0606413e90e10475e4c68a97ac0d38d6b3e",
+          "0x3006dd631ea6043553e91c9629b0f5d3950e6e39befb4a72ad8131f1e0b9778d",
+          "0x76daf7cc0ab266e8cd43df12f7c33b9d00b746dd12da7965d571b2be10e473e6"
+        ],
+        "attrHeight": 4,
+        "holder": "0xa05BfF3C14573812751740e8fF9f0DdF60947407",
+        "nullifier": "0x03e19ea02d70d976bcfa3c76b686bb17090f66f69ecc060108a132204caac9c6",
+        "validUntil": 2082585600,
+        "schemaId": "0x888e30cb8c59ca14bd5ad0028051d950525380e11331dc1c938498f6c1d89fc1",
+        "leafIndex": 1,
+        "issuancePath": [
+          "0xbc4849392eb7552c708eb62e37326b7caf267384c2428791de3a17e2ec04a62b",
+          "0x1412d9b149994c9b861bab7e2a7ec465d2143694dd0b0abdce01e42e3881df32",
+          "0xba537479121b31be17df0bfbaf3e574c4a76e68f4bfd7c7d2d33ccdc8c45abf1"
+        ],
+        "nonRevocation": {
+          "bitmap": "7237005577332262213973186563042994240829374041602535252466099000494570602496",
+          "siblings": [
+            "0x4902d2336843777db8f8b130f9f4296a84fe0d834c821ccdcea547657370b0e6"
+          ]
+        },
+        "holderSig": "0x059e54f8e246d5d1a20f76cd5dc8cadb19553d198a0fbc7628d219b6f90a7d853879927259ba372b7ca5514530ca15993c6c337a32f7826cf04a759128a53b311c"
+      }
+    },
+    {
+      "credential": 2,
+      "revoked": false,
+      "disclosed": [
+        "studentName",
+        "degree",
+        "major",
+        "graduationYear"
+      ],
+      "presentation_bytes": 782,
+      "verifier": {
+        "ok": true,
+        "reason": "valid"
+      },
+      "presentation": {
+        "issuerId": "0x29eb70f61e555909371db2621abb5cd23b7fc0542f4fe0f6a866de5eb4717f09",
+        "epoch": 1,
+        "disclosed": [
+          {
+            "index": 1,
+            "key": "studentName",
+            "value": "Divya Joshi",
+            "salt": "0x9ad7e362cc2576a92bd6620d519ad02bba6b5232a538bf0326f6f48e23967400"
+          },
+          {
+            "index": 5,
+            "key": "degree",
+            "value": "BBA",
+            "salt": "0xfaa8dd38cdb2c2d5c68a9ae178a16db6aa8f4553a1af5769868dd5b32996e6e0"
+          },
+          {
+            "index": 6,
+            "key": "major",
+            "value": "Marketing",
+            "salt": "0x5e348b68f7fc3ee7d22ca257abc9b0fa4e7822d100ed1166077f679a5e4c4317"
+          },
+          {
+            "index": 10,
+            "key": "graduationYear",
+            "value": "2023",
+            "salt": "0x5c35fcd63ebd1fa80b6f7d19de3c9f030d59466d80c71ec98d464173feb7858d"
+          }
+        ],
+        "attrProof": [
+          "0x170593c777d9eef571a8afdd6ed6328af36c823adb81e11448d8f25ff6dbb727",
+          "0x9e6a6953092a7b19e487e3dfb56dc9f90172ff1f04fe712392cea12d6ee0b568",
+          "0xc1d4c949cf7655aca505772a2452a24a5ff1253ce95101f7077bbeb0ed65525c",
+          "0x32b4aa02e5deedaa36faf91ebafdcf92e89ce33055aba16b158a6609e378c9dc",
+          "0x08508ac28e223e58bb4346df7015d9c3a682c586f46bdfde64ff2ece4b19857f",
+          "0x310bdcae63aa55723c1ff5a69e7479d7cbf0d387f0c03a9ee3ced7aa4d96721e",
+          "0x74039d9eacd7d6a391ba63fea00d1c481de0b355cd5b146bae5ffaeb9c588a61"
+        ],
+        "attrHeight": 4,
+        "holder": "0x7E0Dd025fb94a75A1Fe65A1C6bD1a84e701b9F80",
+        "nullifier": "0xa82f1a52095c2a708f7f56418d30f09d794847c8f9616e7fed0147264306b4d3",
+        "validUntil": 2082585600,
+        "schemaId": "0x888e30cb8c59ca14bd5ad0028051d950525380e11331dc1c938498f6c1d89fc1",
+        "leafIndex": 2,
+        "issuancePath": [
+          "0x793ded8a6ebaf9f026f397765353b329087629b8b3c6d20bd3f46d46067b77c6",
+          "0xbc192b1b2c53fea82372ce145881632becba77ae960e3f6b21746fdb3817e9dd",
+          "0xba537479121b31be17df0bfbaf3e574c4a76e68f4bfd7c7d2d33ccdc8c45abf1"
+        ],
+        "nonRevocation": {
+          "bitmap": "57896044618658097711785492504343953926634992332820282019728792003956564819968",
+          "siblings": [
+            "0x7325f0bbad590a24bd51a377c75c3c755123ca2ba395f4bc0c1fbe98ba1cf5bd"
+          ]
+        },
+        "holderSig": "0xd7085d920818b2b645dd93ac6c8d53ec17099ec6877e9d0f22335464d0d37d7a6238aa1896882bbf029360a62ec0c4a7bdbef37f28ce6a0ec4cce6994f6bc8f21b"
+      }
+    },
+    {
+      "credential": 3,
+      "revoked": false,
+      "disclosed": [
+        "studentName",
+        "degree",
+        "major",
+        "graduationYear"
+      ],
+      "presentation_bytes": 792,
+      "verifier": {
+        "ok": true,
+        "reason": "valid"
+      },
+      "presentation": {
+        "issuerId": "0x29eb70f61e555909371db2621abb5cd23b7fc0542f4fe0f6a866de5eb4717f09",
+        "epoch": 1,
+        "disclosed": [
+          {
+            "index": 1,
+            "key": "studentName",
+            "value": "Ravi Chowdary",
+            "salt": "0xa4aa06e7277925c8e5a0c60d3dddc8b0f2e6910cd891406674cb40921fd62048"
+          },
+          {
+            "index": 5,
+            "key": "degree",
+            "value": "Ph.D",
+            "salt": "0xc1d3d6bd8058e74e8601b2fc35d14569f5cdc8b73e176286fe2135ad143cae52"
+          },
+          {
+            "index": 6,
+            "key": "major",
+            "value": "Computer Science",
+            "salt": "0x718160155e1508be45a4823552cbd465c2122da7e7f4c556d02a2579cf549288"
+          },
+          {
+            "index": 10,
+            "key": "graduationYear",
+            "value": "2023",
+            "salt": "0xa17b5f0d254e9999406b2230a6cea4f9c9024ea3b27eb7035b55ac6f006cd2b7"
+          }
+        ],
+        "attrProof": [
+          "0xfc26e5d975e295803c938e866e2444dec76f2ad873361ddbe095ac0542aa057c",
+          "0xc7f121a94052137736c57031313c75f7fac6cab5156e56cd46d518f45dc9fc5d",
+          "0x9c66b59d17680cc5e67f6393b2195f560ca9686cb86fffda0610f3d60ed3aa05",
+          "0xb5607ba217e5bc1f0a10c2fa080a8fef3e7fc6510911cf6a7436ef8cf3016f33",
+          "0x23232d69a1853a130718012eca8189bfdc3ebd01dadfb5cdf1eb73aaf3daba46",
+          "0x64e89d175178881bfdd372aaf48e471d0431047f68ae2e3bdeb79cb8d50cea92",
+          "0x17ea4dc9be58cc477acbf940a2c6d989e420d5d88609507394499aea1c632e10"
+        ],
+        "attrHeight": 4,
+        "holder": "0xF093b76f0ba2DEE25AED91B8b266c00409905eF7",
+        "nullifier": "0x66a253c97374acc6da8063c35a1332539aec4d5bb86a553c24201d58b67e63c4",
+        "validUntil": 2082585600,
+        "schemaId": "0x888e30cb8c59ca14bd5ad0028051d950525380e11331dc1c938498f6c1d89fc1",
+        "leafIndex": 3,
+        "issuancePath": [
+          "0x7b9793be1da41f3d84fc60ad413395fd79039df7d3f4aca5e059b08a75304812",
+          "0xbc192b1b2c53fea82372ce145881632becba77ae960e3f6b21746fdb3817e9dd",
+          "0xba537479121b31be17df0bfbaf3e574c4a76e68f4bfd7c7d2d33ccdc8c45abf1"
+        ],
+        "nonRevocation": {
+          "bitmap": "28948022309329048855892746252171976963317496166410141009864396001978282409984",
+          "siblings": [
+            "0x2df185822ddde711a7547e761957b9987dfb69703a7ceb5cfb0161107eb9bd4b"
+          ]
+        },
+        "holderSig": "0xef671b1ce83760d94f7e036cb1f3c4045c65d4b38769426c6ae0ff88cf0b578e65561eb0d53c4dbae26012f82d06cc538b6a24d24639624d925de69500c9b0a31b"
+      }
+    },
+    {
+      "credential": 4,
+      "revoked": true,
+      "disclosed": [
+        "studentName",
+        "degree",
+        "major",
+        "graduationYear"
+      ],
+      "presentation_bytes": 792,
+      "verifier": {
+        "ok": false,
+        "reason": "revoked or bad non-revocation proof"
+      },
+      "presentation": {
+        "issuerId": "0x29eb70f61e555909371db2621abb5cd23b7fc0542f4fe0f6a866de5eb4717f09",
+        "epoch": 1,
+        "disclosed": [
+          {
+            "index": 1,
+            "key": "studentName",
+            "value": "Diya Varma",
+            "salt": "0xdf7eee53de0b3a78d845eacebfbc693168b584933d6e1377b0782ea82e5a0b3b"
+          },
+          {
+            "index": 5,
+            "key": "degree",
+            "value": "B.Tech",
+            "salt": "0x7ab29d9e06720834ba860ceef385f5d6a3e0dcf63f81915289992ed2b88485f2"
+          },
+          {
+            "index": 6,
+            "key": "major",
+            "value": "Civil Engineering",
+            "salt": "0xba5233313ffc0804053af8b3bf4fe07f68af8a7e0a4e5164545a75b4151f8c9e"
+          },
+          {
+            "index": 10,
+            "key": "graduationYear",
+            "value": "2024",
+            "salt": "0xc16c29c6e15df52289772e0d2da7960b7cbbac5ffd460b9ea6305e48f0a3faa6"
+          }
+        ],
+        "attrProof": [
+          "0xef07a07b93cc29066a9827cb014ede8245c988b6bc077d7836872e4f4fdd29ae",
+          "0x9b68f15f89fafc3527f2b73587bf8f74b69b1cd98822ea9ad7e1ae115cc9596d",
+          "0x43dc6637d1858b6a40c0833c577b0a8fb5c967810262da2eda6ad0b55cab922a",
+          "0xf774179ace2480e179e150ea8c18cfa3a5e834f90f4cb5333e0d8dd12aba89bf",
+          "0x6a35e3ffafb165e9e128b0de3a137a2163b854bc6de724c46ae8067d2b83cc40",
+          "0xd04befeba6f485f9a3644365d01eee16fe2c7262b1060db0584bdbf4d5b97e44",
+          "0x1be36302ac9c0906360c386d8dcf8c711039e441eca3481eb38f8166b9bfe19e"
+        ],
+        "attrHeight": 4,
+        "holder": "0xf0550E19b9b650DA51244547372efC4e3F2C8D70",
+        "nullifier": "0x1cd63863b2b657aef00716bf7277e2ccc9cbad1b4c084bcd8b56fa15e668af4d",
+        "validUntil": 2082585600,
+        "schemaId": "0x888e30cb8c59ca14bd5ad0028051d950525380e11331dc1c938498f6c1d89fc1",
+        "leafIndex": 4,
+        "issuancePath": [
+          "0x4d47dd70eee1556ca9e0996a06435667d29f436566a8f28c67959788ed9aaed2",
+          "0xc07a1e8b7e0057673fdc2affe190d8a960c5fe615663f27b7ce84f3d93ef92a6",
+          "0xe0679690921bae7763c9c755ecf095bbc866960317402b1446d14e562307cbb4"
+        ],
+        "nonRevocation": {
+          "bitmap": "7237005577332262213973186563042994240829374041602535252466099000494570602496",
+          "siblings": [
+            "0x3c92b256c84db441e5b694acd4ab0dd970c3c21e094a4b4c31dc78d7d14d3002"
+          ]
+        },
+        "holderSig": "0xf8cbf8c279d7c12b850869fd29c272d53a83cbeae64ebba3d6abc1c4f425b911021c13f5751289117b3cfd73592c3d1695f743be37bd877e0833b4ae8d146fb01b"
+      }
+    },
+    {
+      "credential": 5,
+      "revoked": false,
+      "disclosed": [
+        "studentName",
+        "degree",
+        "major",
+        "graduationYear"
+      ],
+      "presentation_bytes": 840,
+      "verifier": {
+        "ok": true,
+        "reason": "valid"
+      },
+      "presentation": {
+        "issuerId": "0x29eb70f61e555909371db2621abb5cd23b7fc0542f4fe0f6a866de5eb4717f09",
+        "epoch": 1,
+        "disclosed": [
+          {
+            "index": 1,
+            "key": "studentName",
+            "value": "Kavya Reddy",
+            "salt": "0x66fdf84b49d8df0e2d627f1249cdec8f977d7edb60a1332232bf8020427b768f"
+          },
+          {
+            "index": 5,
+            "key": "degree",
+            "value": "B.Tech",
+            "salt": "0x8ef9fe30e47c95935c7c00d7d8371783c4f56737fe729159395a819c20b12260"
+          },
+          {
+            "index": 6,
+            "key": "major",
+            "value": "Computer Science and Engineering",
+            "salt": "0xbbefba40dd787f773de9023d75a2f18955b06200faad5155d3ed8bf8fa69aca6"
+          },
+          {
+            "index": 10,
+            "key": "graduationYear",
+            "value": "2023",
+            "salt": "0xfdefa364cfb55c58f2ab0d0c6072bbb33a0e7d530f5e878fac18b2ee74e5b289"
+          }
+        ],
+        "attrProof": [
+          "0xd4c1e80b1153c427f129ed9d3ad95a96e2e8d09415a4fe51e7370986b15c010d",
+          "0x4b4f0c320cff5ba477755989959dd7f8c3fa7fda3e687e922d2e9e74045c7022",
+          "0x781e599889e3c8b2ea2eb12e5019050e7c55577d30b55299e42310b12d88276f",
+          "0x3fe572f52cc607cb7b20b95063a1bc57da4969c5a7510bb5f949b3bbc954f6e5",
+          "0x9c75d68c182b1d218b67432c5457cae605050846c4eda176da84bbd31cba4f7a",
+          "0xc03092847b041162e55f1470c143524fecbd845679f74e7ab271cb5c54da2482",
+          "0xd1ccc51ff2a7a98d52f22752028fb6f9977a911481d4d8892bbc7b69a8825fc6"
+        ],
+        "attrHeight": 4,
+        "holder": "0x04bFc691CceAb2F23Cf96AA24D5B92869485eE7D",
+        "nullifier": "0x0ac8ba3d81342e4e80f4f3d27bfd6c335d5ca496098af649fc06c12781a3f7cc",
+        "validUntil": 2082585600,
+        "schemaId": "0x888e30cb8c59ca14bd5ad0028051d950525380e11331dc1c938498f6c1d89fc1",
+        "leafIndex": 5,
+        "issuancePath": [
+          "0x0d2fb21af35e7b8806e3a568a2ee421c9a2af4f6b68b2675a65a7553d0e8aaa1",
+          "0xc07a1e8b7e0057673fdc2affe190d8a960c5fe615663f27b7ce84f3d93ef92a6",
+          "0xe0679690921bae7763c9c755ecf095bbc866960317402b1446d14e562307cbb4"
+        ],
+        "nonRevocation": {
+          "bitmap": "10855508365998393320959779844564491361244061062403802878699148500741855903744",
+          "siblings": [
+            "0xc02e33a5d53f0688212e94d66323bfda38df4ddeaecf731640a18ed830796215",
+            "0x4902d2336843777db8f8b130f9f4296a84fe0d834c821ccdcea547657370b0e6"
+          ]
+        },
+        "holderSig": "0x99af5a62c2fc3cca0be2c0a16467d18b0b774f3f5e6de4f62ed18ebfc7d53ab02a47574ab3da2e6993b8e4868860e205d276c4073c27fec0875ad78f27fe5ae81b"
+      }
+    }
+  ]
+}

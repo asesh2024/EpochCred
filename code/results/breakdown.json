@@ -1,0 +1,22 @@
+[
+  {
+    "step": "record digests (2)",
+    "median_ms": 0.024457
+  },
+  {
+    "step": "attribute leaves + multiproof",
+    "median_ms": 0.071359
+  },
+  {
+    "step": "credential leaf + issuance path",
+    "median_ms": 0.046087
+  },
+  {
+    "step": "SMT non-membership (256 levels)",
+    "median_ms": 0.055256
+  },
+  {
+    "step": "holder signature recovery",
+    "median_ms": 1.311271
+  }
+]

@@ -1,0 +1,2 @@
+row,institution,studentName,studentId,dateOfBirth,program,degree,major,cgpa,classification,admissionYear,graduationYear,transcriptHash,issueDate,convocationNo,nationality,email
+0,Example Institute of Technology,Aarav Sharma,EIT2022000000,2003-01-23,B.Tech Mechanical Engineering,B.Tech,Mechanical Engineering,7.70,First Class,2022,2026,0x65ab5d1056b9403075c47d458ec361c6f88442f63574b0644c3eb064e731d17c,2026-07-15,14,Indian,aarav.sharma0@example.edu

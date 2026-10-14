@@ -1,0 +1,443 @@
+[
+  {
+    "id": "T1",
+    "name": "Valid presentation (off-chain)",
+    "threat": "correctness",
+    "expected": "accept",
+    "observed": "accept",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T2",
+    "name": "Valid presentation (on-chain verifyAttribute)",
+    "threat": "correctness",
+    "expected": "accept",
+    "observed": "accept",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T3",
+    "name": "Tampered disclosed attribute value",
+    "threat": "credential alteration",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T4",
+    "name": "Attribute re-labelled under another schema key",
+    "threat": "semantic confusion",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T5",
+    "name": "Fabricated credential with borrowed Merkle path",
+    "threat": "forgery",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T6",
+    "name": "Leaf-index substitution",
+    "threat": "proof manipulation",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T7",
+    "name": "Replay of presentation to another verifier/nonce",
+    "threat": "replay",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T8",
+    "name": "Presentation re-signed with a key other than the holder key",
+    "threat": "holder-key binding",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T9",
+    "name": "Undisclosed attributes absent from presentation",
+    "threat": "over-disclosure",
+    "expected": "none-leaked",
+    "observed": "none-leaked",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T10",
+    "name": "Commit with k-1 compromised officers",
+    "threat": "insider forgery",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T11",
+    "name": "Same officer signature repeated k times",
+    "threat": "threshold bypass",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T12",
+    "name": "Signatures by non-officers",
+    "threat": "unauthorised issuer",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T13",
+    "name": "Re-commit / rewrite an already committed epoch",
+    "threat": "history rewriting",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T14",
+    "name": "Skip epoch number (gap)",
+    "threat": "log forking",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T15",
+    "name": "Valid k signatures over wrong prevHead (fork)",
+    "threat": "equivocation",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T16",
+    "name": "Replay endorsement on another registry deployment",
+    "threat": "cross-domain replay",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T17",
+    "name": "Malleated (high-s) officer signature",
+    "threat": "signature malleability",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T18",
+    "name": "Revoked credential (off-chain)",
+    "threat": "use after revocation",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T19",
+    "name": "Revoked credential (on-chain)",
+    "threat": "use after revocation",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T20",
+    "name": "Pre-revocation proof replayed after revocation",
+    "threat": "stale-proof replay",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T21",
+    "name": "Non-revoked sibling credential still valid",
+    "threat": "revocation collateral damage",
+    "expected": "accept",
+    "observed": "accept",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T22",
+    "name": "Revocation root older than staleness bound",
+    "threat": "freshness / withheld update",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T23",
+    "name": "Expired credential",
+    "threat": "expiry",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T24",
+    "name": "Officer-set rotation by k current officers",
+    "threat": "key compromise recovery",
+    "expected": "accepted",
+    "observed": "accepted",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T25",
+    "name": "Old (rotated-out) officers attempt commit",
+    "threat": "post-rotation misuse",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T26",
+    "name": "New officers commit after rotation",
+    "threat": "liveness after rotation",
+    "expected": "accepted",
+    "observed": "accepted",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T27",
+    "name": "Non-accreditor registers a rogue issuer",
+    "threat": "unaccredited issuer",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T28",
+    "name": "Fraud proof with a never-revoked nullifier",
+    "threat": "false accusation / griefing",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T29",
+    "name": "Revoked credential re-validated by dropping its nullifier (before challenge)",
+    "threat": "revocation rollback",
+    "expected": "accept",
+    "observed": "accept",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T30",
+    "name": "Anyone submits fraud proof (member in epoch 2, absent in epoch 3)",
+    "threat": "revocation rollback",
+    "expected": "accepted",
+    "observed": "accepted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T31",
+    "name": "Verification (on- and off-chain) after issuer is frozen",
+    "threat": "revocation rollback",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T32",
+    "name": "Frozen issuer attempts a further commit",
+    "threat": "continued operation after fraud",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T33",
+    "name": "Cached proof after a fresh epoch with unchanged revocation root",
+    "threat": "documented behaviour (no new revocations)",
+    "expected": "accept",
+    "observed": "accept",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T34",
+    "name": "Cached proof after root changed while issuer withholds the new list",
+    "threat": "witness withholding",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T35",
+    "name": "Non-accreditor attempts to restore a frozen issuer",
+    "threat": "governance bypass",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T36",
+    "name": "Accreditor restores the frozen issuer",
+    "threat": "recovery liveness",
+    "expected": "accepted",
+    "observed": "accepted",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T37",
+    "name": "Replay of the already-adjudicated fraud proof after restoration",
+    "threat": "griefing by historical evidence",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T38",
+    "name": "Post-restoration epoch that still omits a committed nullifier is challengeable",
+    "threat": "repeated rollback",
+    "expected": "accepted",
+    "observed": "accepted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T39",
+    "name": "Issuer A's officers endorse an epoch of issuer B",
+    "threat": "cross-issuer authority",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T40",
+    "name": "Rotation to a set containing a duplicate address",
+    "threat": "quorum inflation",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T41",
+    "name": "Rotation with quorum k > n",
+    "threat": "unusable officer set",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T42",
+    "name": "Rotation with quorum k = 0",
+    "threat": "quorum removal",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T43",
+    "name": "Replay of a consumed rotation authorisation (same nonce)",
+    "threat": "stale authorisation replay",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T44",
+    "name": "Attribute multiproof with an extra sibling",
+    "threat": "malformed proof",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T45",
+    "name": "Well-formed presentation in the same setting (control)",
+    "threat": "correctness",
+    "expected": "accept",
+    "observed": "accept",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T46",
+    "name": "Non-revocation proof whose sibling list does not match its bitmap",
+    "threat": "malformed proof",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T47",
+    "name": "Leaf index pointing into the zero padding of the batch",
+    "threat": "batch-length confusion",
+    "expected": "reject",
+    "observed": "reject",
+    "pass": true,
+    "kind": "attack"
+  },
+  {
+    "id": "T48",
+    "name": "Endorsed epoch relayed one week late (still the successor)",
+    "threat": "documented behaviour: endorsements do not expire",
+    "expected": "accepted",
+    "observed": "accepted",
+    "pass": true,
+    "kind": "correctness / documented behaviour"
+  },
+  {
+    "id": "T49",
+    "name": "Competing endorsement for an epoch number already taken",
+    "threat": "stale endorsement replay",
+    "expected": "reverted",
+    "observed": "reverted",
+    "pass": true,
+    "kind": "attack"
+  }
+]

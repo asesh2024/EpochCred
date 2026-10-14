@@ -1,0 +1,3 @@
+row,institution,studentName,studentId,dateOfBirth,program,degree,major,cgpa,classification,admissionYear,graduationYear,transcriptHash,issueDate,convocationNo,nationality,email
+0,Example Institute of Technology,Pooja Chowdary,EIT2018000000,2005-02-01,B.Tech Mechanical Engineering,B.Tech,Mechanical Engineering,7.90,First Class,2018,2022,0x8ebc07ed5383bfa788ccff3d4ee4636d3c21660d454c522b9b9e4787583e66c0,2022-07-15,10,Indian,pooja.chowdary0@example.edu
+1,Example Institute of Technology,Sai Gupta,EIT2018000001,2002-02-03,B.Tech Electronics and Communication Engineering,B.Tech,Electronics and Communication Engineering,7.87,First Class,2018,2022,0x256069da11bd63396a0fc100079885736b2f0b8990f3c04099ca49f434e024e3,2022-07-15,10,Indian,sai.gupta1@example.edu

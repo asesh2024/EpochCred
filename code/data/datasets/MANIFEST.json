@@ -1,0 +1,197 @@
+{
+  "generator": "offchain/lib/data.js makeRecords(n, seed)",
+  "schema": [
+    "institution",
+    "studentName",
+    "studentId",
+    "dateOfBirth",
+    "program",
+    "degree",
+    "major",
+    "cgpa",
+    "classification",
+    "admissionYear",
+    "graduationYear",
+    "transcriptHash",
+    "issueDate",
+    "convocationNo",
+    "nationality",
+    "email"
+  ],
+  "note": "Synthetic records. Regenerate any set with makeRecords(n, seed); the SHA-256 is over JSON.stringify(records).",
+  "sets": [
+    {
+      "experiment": "dictionary_attack.js (RQ6, Table 10)",
+      "n": 200,
+      "seed": 31337,
+      "sha256_json": "ec4a3fae73d8d4ecdd0ae1ebebef4515715119fa4d572001b273f54f69158a85",
+      "csv": "datasets/records_n200_seed31337.csv"
+    },
+    {
+      "experiment": "security_tests.js (Table 4, main fixture)",
+      "n": 16,
+      "seed": 7,
+      "sha256_json": "0e59cfea2f0da153ea905cc322b3c558756f6d3f4504327c7af2384d6d1285d1",
+      "csv": "datasets/records_n16_seed7.csv"
+    },
+    {
+      "experiment": "security_tests.js (fraud-proof fixture)",
+      "n": 4,
+      "seed": 9,
+      "sha256_json": "fe63660c4b3ab7b52523c99a435236fe94fa5350d30be4441cea198b5a4d7798",
+      "csv": "datasets/records_n4_seed9.csv"
+    },
+    {
+      "experiment": "security_tests.js (restoration fixture)",
+      "n": 4,
+      "seed": 10,
+      "sha256_json": "b8177bb3ddde4cc78a8ef1c2c15e54885edd670a2b464d53020a1f4787f2a0ae",
+      "csv": "datasets/records_n4_seed10.csv"
+    },
+    {
+      "experiment": "security_tests.js (late-relay fixture, T48)",
+      "n": 2,
+      "seed": 12,
+      "sha256_json": "012ee58245f09ef5d35863121dc12283bb3acfaa5cee1b3aee9f7f9e0bd2a74c",
+      "csv": "datasets/records_n2_seed12.csv"
+    },
+    {
+      "experiment": "gas_experiments.js (RQ1-RQ3, Tables 5-6)",
+      "n": 4096,
+      "seed": 1,
+      "sha256_json": "ad935b5f4e2d4e2dd7a271c7f5715fee459a81f6015e9ad5e3f056f622963ce8",
+      "csv": "datasets/records_n4096_seed1.csv"
+    },
+    {
+      "experiment": "breakdown.js (verification breakdown)",
+      "n": 1024,
+      "seed": 3,
+      "sha256_json": "09f93f5f3ef9ded82fc706bb0d1146edce4d8012a0705aed524c2fd403c8091a",
+      "csv": "datasets/records_n1024_seed3.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (baseline documents, Table 9)",
+      "n": 1024,
+      "seed": 77,
+      "sha256_json": "cf3aa9df8130d2a20b6d125ca7a6309626e3497821175208eb1278adcad3ff32",
+      "csv": "datasets/records_n1024_seed77.csv"
+    },
+    {
+      "experiment": "gen_vectors.js (cross-implementation vectors)",
+      "n": 1,
+      "seed": 99,
+      "sha256_json": "6d66654df4b2b922ebbbb01f4db378c8a423727a142b86a5046d8d40467b3649",
+      "csv": "datasets/records_n1_seed99.csv"
+    },
+    {
+      "experiment": "deploy_testnet.js (Sepolia, 10 epochs x 256)",
+      "n": 2560,
+      "seed": 5,
+      "sha256_json": "1f713607212d296ab28df64d652c913363004c3b869c39995dad4680979ef6b7",
+      "csv": "datasets/records_n2560_seed5.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=16, r=1024)",
+      "n": 16,
+      "seed": 1040,
+      "sha256_json": "106fa255248aa0ae7518ddc9bae901a775b0ea90e55fd5b8e3d84880ed25439b",
+      "csv": "datasets/records_n16_seed1040.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=64, r=1024)",
+      "n": 64,
+      "seed": 1088,
+      "sha256_json": "0bc19e9e0f4cb799286fbbe74229571c7aefbf40c420676a6cb6b8fa2284ddd6",
+      "csv": "datasets/records_n64_seed1088.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=256, r=1024)",
+      "n": 256,
+      "seed": 1280,
+      "sha256_json": "842bd241fbb0960b8ecb815114257e36415a9d5da207a6c637d6f22854831b9a",
+      "csv": "datasets/records_n256_seed1280.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=1024)",
+      "n": 1024,
+      "seed": 2048,
+      "sha256_json": "085a822a8569f42d47a07b982342032f51bab59a52f9b1bd1ecf3cb33ba361c6",
+      "csv": "datasets/records_n1024_seed2048.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=4096, r=1024)",
+      "n": 4096,
+      "seed": 5120,
+      "sha256_json": "59a7335fd48d6a02f77523a2ffd058f1a35a6213d75ad9dca7e91a78a66f9f04",
+      "csv": "datasets/records_n4096_seed5120.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=16384, r=1024)",
+      "n": 16384,
+      "seed": 17408,
+      "sha256_json": "582b900a6385d47b2c5c5002c992004db97a875328738137160b207713183d1a"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=65536, r=1024)",
+      "n": 65536,
+      "seed": 66560,
+      "sha256_json": "178b4be0007146e6497aa6a51e6390b1be5ccdf82919e20f2e3ff05cf8d1319d"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=0)",
+      "n": 1024,
+      "seed": 1024,
+      "sha256_json": "d23a0fcba4d871afea600f67800fd90b9479119074ef2c240cc8461bf0be157b",
+      "csv": "datasets/records_n1024_seed1024.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=16)",
+      "n": 1024,
+      "seed": 1040,
+      "sha256_json": "dfba950f0d9cc6741d25263a0d0ab0025cfd34a2ec5b8aef5b5029b4470e12a2",
+      "csv": "datasets/records_n1024_seed1040.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=64)",
+      "n": 1024,
+      "seed": 1088,
+      "sha256_json": "e267e1b1ab5016bfe29b294c50b664244138723202afbba87b51d1f790d7ae6a",
+      "csv": "datasets/records_n1024_seed1088.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=256)",
+      "n": 1024,
+      "seed": 1280,
+      "sha256_json": "42afd899602834d0c403e3fedba5e752327146d48f25c5739dd831efe2bfcb01",
+      "csv": "datasets/records_n1024_seed1280.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=1024)",
+      "n": 1024,
+      "seed": 2048,
+      "sha256_json": "085a822a8569f42d47a07b982342032f51bab59a52f9b1bd1ecf3cb33ba361c6",
+      "csv": "datasets/records_n1024_seed2048.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=4096)",
+      "n": 1024,
+      "seed": 5120,
+      "sha256_json": "66cb737bc8751502073fd3ce4f8e9513fe739c3b076617a7d16db9ecf1ecb5a8",
+      "csv": "datasets/records_n1024_seed5120.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=16384)",
+      "n": 1024,
+      "seed": 17408,
+      "sha256_json": "88dc0ea7e1fd99f97c5afc2e508c76862cc4e569261539784003e8e2b2de78aa",
+      "csv": "datasets/records_n1024_seed17408.csv"
+    },
+    {
+      "experiment": "verify_experiments.js (Table 8, B=1024, r=32768)",
+      "n": 1024,
+      "seed": 33792,
+      "sha256_json": "28c7d256a24aecd468592df5980f680d90e4324fac671c3de801eef88647865b",
+      "csv": "datasets/records_n1024_seed33792.csv"
+    }
+  ]
+}

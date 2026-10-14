@@ -1,0 +1,72 @@
+[
+  {
+    "attribute": "cgpa",
+    "dictionarySize": 1001,
+    "entropyBits": 9.967226258835993,
+    "targets": 200,
+    "unsalted_recovered": 200,
+    "unsalted_rate": 1,
+    "unsalted_table_ms": 22.151892,
+    "unsalted_ms_per_target": 0.11075946,
+    "salted_recovered": 0,
+    "salted_trials": 220220,
+    "salted_ms": 3116.612016,
+    "salted_success_bound": "2^-256 per guess (salt unknown); dictionary of 2^10.0 useless"
+  },
+  {
+    "attribute": "graduationYear",
+    "dictionarySize": 101,
+    "entropyBits": 6.658211482751795,
+    "targets": 200,
+    "unsalted_recovered": 200,
+    "unsalted_rate": 1,
+    "unsalted_table_ms": 1.449582,
+    "unsalted_ms_per_target": 0.00724791,
+    "salted_recovered": 0,
+    "salted_trials": 204020,
+    "salted_ms": 2867.060032,
+    "salted_success_bound": "2^-256 per guess (salt unknown); dictionary of 2^6.7 useless"
+  },
+  {
+    "attribute": "classification",
+    "dictionarySize": 5,
+    "entropyBits": 2.321928094887362,
+    "targets": 200,
+    "unsalted_recovered": 200,
+    "unsalted_rate": 1,
+    "unsalted_table_ms": 0.124656,
+    "unsalted_ms_per_target": 0.00062328,
+    "salted_recovered": 0,
+    "salted_trials": 200100,
+    "salted_ms": 2881.00522,
+    "salted_success_bound": "2^-256 per guess (salt unknown); dictionary of 2^2.3 useless"
+  },
+  {
+    "attribute": "dateOfBirth",
+    "dictionarySize": 7812,
+    "entropyBits": 12.93147623388679,
+    "targets": 200,
+    "unsalted_recovered": 200,
+    "unsalted_rate": 1,
+    "unsalted_table_ms": 113.560877,
+    "unsalted_ms_per_target": 0.5678043850000001,
+    "salted_recovered": 0,
+    "salted_trials": 468720,
+    "salted_ms": 6798.04509,
+    "salted_success_bound": "2^-256 per guess (salt unknown); dictionary of 2^12.9 useless"
+  },
+  {
+    "attribute": "program",
+    "dictionarySize": 70,
+    "entropyBits": 6.129283016944966,
+    "targets": 200,
+    "unsalted_recovered": 200,
+    "unsalted_rate": 1,
+    "unsalted_table_ms": 2.901494,
+    "unsalted_ms_per_target": 0.01450747,
+    "salted_recovered": 0,
+    "salted_trials": 201600,
+    "salted_ms": 2927.890571,
+    "salted_success_bound": "2^-256 per guess (salt unknown); dictionary of 2^6.1 useless"
+  }
+]

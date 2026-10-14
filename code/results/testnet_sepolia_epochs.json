@@ -1,0 +1,178 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "registry": "0x249f6E19e591a4d379EE0D457790B147772c8582",
+  "source": "chain logs and transaction calldata",
+  "epochs": [
+    {
+      "epoch": 1,
+      "txHash": "0xdf0f854db521c3242453445653a15dc2bbefa07d449374507515e0a9c6c3f21b",
+      "block": 11910322,
+      "gasUsed": 276288,
+      "record": {
+        "issuanceRoot": "0xb0b2ae335d65938480ef3133f22e5382e8deffe5e854ff065619172de3dc3827",
+        "revocationRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "timestamp": 1791945552,
+        "count": 256,
+        "prevHead": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "digest": "0x1f3bb1c5968f68c5a969e2361b4c1d398bdd432ccb743a3b36bd9de8f40f78ff",
+      "digest_matches_event": true,
+      "signatures": "0xee59ceb552620036abe05f9291cde9b2e6cd7b0eddfcfffc729c906bb80c32a6429fc2921587180a8264f9437c6679489bfd90d788d2383342a833ef65643e821cb4396fd705f20190663f65d05941b33f83e49012bc4a98d31f03698603576ca95ae73b21fbb5005c7aef1fcc493d6296e708c9a178ac27e4a22ca80101e6bbfd1c8119469926673fcc868f1ca6b24ae9a22648ace5d37b6abe89172225903a2b4b6c46889d7eaacf3573d7e7c0d21c61992d029e2531e2f76679631d49a2692a041c"
+    },
+    {
+      "epoch": 2,
+      "txHash": "0x05be79f054ec6d838ec70a049641834bab504acfcca38fdf1b0e8c76430d36e2",
+      "block": 11910323,
+      "gasUsed": 178752,
+      "record": {
+        "issuanceRoot": "0xcd65855829ba8939731874d63c5cc33ef064daee300341b936714df38de403eb",
+        "revocationRoot": "0x37de46269efcfa04a6b6bc172f7f5fa4b007557964541ca417bc093b8d6c4aa0",
+        "timestamp": 1791945564,
+        "count": 256,
+        "prevHead": "0x1f3bb1c5968f68c5a969e2361b4c1d398bdd432ccb743a3b36bd9de8f40f78ff"
+      },
+      "digest": "0x78a3bdb58c092e4e6f6a3415a6f5aaddddd8dbd27b185d2d6aa17cdf4b002b50",
+      "digest_matches_event": true,
+      "signatures": "0xb914df527bc6b49505bc9edc01eec764a501982c770a2fa5f717e03d18e74f794ab8a4230a38dcfe8d9858a500d8a02ac1d612c86c63013ef65c1ef97845f72a1b6b9af9159f93092edbd5658700d44408ba5383db0c68da1d85c9fa4a66b8f7c8538e9bc1a56b55a8760867df501ce1d3ab441ea5aa35b849b54d8a215b2858751b13e0370b1395f379d5456ac3dd279866b018354d3a2070f9b3ca4f327625e11b6c3db482bce0f5ce736be1ffb5a72ed86a09b0b796aa946eee847ebb79c579f01b"
+    },
+    {
+      "epoch": 3,
+      "txHash": "0x9e4fc359e6642f9019c0771d7f4ae0f93bba6c73559aad31c3ed7c5e8b0acb5a",
+      "block": 11910325,
+      "gasUsed": 178776,
+      "record": {
+        "issuanceRoot": "0xd161dc124414f1adbe2c3efbf6102d46483c7485781468c80ab32ed3ff3a5c53",
+        "revocationRoot": "0x6ea584a6404e9c4859e2d44b7534d494aa7be26c48f182544c6e13fc2134440f",
+        "timestamp": 1791945588,
+        "count": 256,
+        "prevHead": "0x78a3bdb58c092e4e6f6a3415a6f5aaddddd8dbd27b185d2d6aa17cdf4b002b50"
+      },
+      "digest": "0x13186e781ddc9a0fa6b3e49cba025a065e55aa02c0d1a2f0a47dd05050041729",
+      "digest_matches_event": true,
+      "signatures": "0x7852a10ba0f749f672171e18dd590a073184e027f07c1a3d22b8fb97f7b2be16632d9eba265345f0ef0abf4095fb896c80cb8da711b6e6e267ca80bf1a4912da1c7ed75bdbd4b863478b2d5a93dc129f2c8ee2ea7102527beedd56a8f3b3e9ed661c86cbf391b8676534801f9b0ca88bfd7a16ac9e8d19eb9a52bd07a62ca697181c6cc9b66ff88d7a6dab2ea27d6b07fd3d2c3d6ae9395c0269f13776eb93703b7e73e8c9a4f3ec7d1ba481fdfc43f79e4d8d19961ac03f3ec0646da5d5e4e248fe1b"
+    },
+    {
+      "epoch": 4,
+      "txHash": "0x7dde1c533eb2c7faafbd0f50eea6c90bc7c645ab34509823dd04ccf6da46bb72",
+      "block": 11910326,
+      "gasUsed": 178764,
+      "record": {
+        "issuanceRoot": "0x307576777ef0d324119f905275aff666cecd9a6fe78d1047de53b4a0097146e2",
+        "revocationRoot": "0xf76a9f940cd4156d4c927a7934aefbcedaca937e9ea790fa572cdbce6c74bc88",
+        "timestamp": 1791945600,
+        "count": 256,
+        "prevHead": "0x13186e781ddc9a0fa6b3e49cba025a065e55aa02c0d1a2f0a47dd05050041729"
+      },
+      "digest": "0x5763cb360da6f193630ba2ce697716b67113b74edc9ca12db08cd9351a1469ce",
+      "digest_matches_event": true,
+      "signatures": "0x3e2d92c57456cd1f71cf0155cfce1ac53fdff9dafb9efd060dc9251ba1d84d85712546bdc3dec5d4f6b1fc1e9f6db018439763597124ab536fd835485bfa932b1c885b52935e668f1be2ad972bc2800c75e8d20ce5309053bf36f6f8e2fa8318db524dcdb75c8d835a45209578a56f3a00c9eddc4373f99801bcdfc4f369af5dbe1b363f0e67bfb934f0ec1360fb7e67268ae5990d8b06c463ab89dc73498df602f4050ab447a2eb4e8af78745f1cbf0684c5bb65314191bfe1466a90e21bbb9c5d31c"
+    },
+    {
+      "epoch": 5,
+      "txHash": "0xede1ffa4dd3ce62475ba943bc8ba4bd322e4e2ae40ae1c8f27576d3d53c20b13",
+      "block": 11910328,
+      "gasUsed": 178776,
+      "record": {
+        "issuanceRoot": "0x15d2cc0225fda1eca8ecd19145f7dc676ebdbb28cc35e0ae3e52f3c9105d34c5",
+        "revocationRoot": "0x8c2599b2e484dd518ba4b82a07ba3f50b27a7a7d3101e351cc201b9316e4287b",
+        "timestamp": 1791945624,
+        "count": 256,
+        "prevHead": "0x5763cb360da6f193630ba2ce697716b67113b74edc9ca12db08cd9351a1469ce"
+      },
+      "digest": "0x601db32ee2745f988437bdf65fa377c0fd7ddd64a81be5b2372f8b93562041b9",
+      "digest_matches_event": true,
+      "signatures": "0x19bcc0140119c2f4b9e4bedccf7a6baf4011558a0a5f415b15fbce4760e92ab018d3daee9b338aea03609566ec1e1c662c0a742e6aeff18fce3a917d450a2a931c3e8f88f9f2e336a73f9302627a953c7925e71de198fd5d7d785819c92dfd793e485d16065fd84106eb1670dc8d725d103b0a84b266250119332fdba0ece0369d1c977c3db40d6419c0ac07036a2a6061b455d0b5ec90d2d77bc38008550236d2826469a6f0c3ae8eb8ad72abe20b112961454c9192dad44e76bdd5b0e5acd96fba1b"
+    },
+    {
+      "epoch": 6,
+      "txHash": "0xb46b7e458be7371574cf70131419bd6b142213c9fa81a49384b06ea5984d4217",
+      "block": 11910329,
+      "gasUsed": 178764,
+      "record": {
+        "issuanceRoot": "0xe27b4b8d1a1f49e64f497f4d0c3b9800d5c026eae7d901ce34e517ebf81fba2a",
+        "revocationRoot": "0x4bae343a4f5825f8609aa75e5b3e36c0477b47b802f8b939650ab8bfe4b80cf8",
+        "timestamp": 1791945636,
+        "count": 256,
+        "prevHead": "0x601db32ee2745f988437bdf65fa377c0fd7ddd64a81be5b2372f8b93562041b9"
+      },
+      "digest": "0xeb7d1c90e199e55e7bfa8b48fac379fbe2b398f5533067462b19fb59231d3e94",
+      "digest_matches_event": true,
+      "signatures": "0x5f0487f4d038c645c11df2f643d5f63efce19b42b6c869c1b44afc03c980528d677e78bdb252c4fcd20e08e05842340c06e33596472df377b6b6b63fa96cd62c1b99c066cf07ac09f0a6595cd5697af68bb0fcb9fbce6f4b1d9401c09871679d4059145b605bd54eebc03e87149a5d0d65c97ae7f1dba88990f022514a0a354d3f1ce555518bd9d3a1bd7775d3a3e7e9cce207e11f354616a7c66e14a1059e2dc2597bfe8ef9d68a790f715ee3d6c1c72c6e3a61f703fa9fbcff6862f31d89cd92e71b"
+    },
+    {
+      "epoch": 7,
+      "txHash": "0xad06af061befd703f3dbf225627677ee5499e366fe6f53480c9fee3deeb84e10",
+      "block": 11910330,
+      "gasUsed": 178752,
+      "record": {
+        "issuanceRoot": "0x71b1a3ac658b0ad5b204e027692981f8b8af7bd66a5c74b0d406a61e7ff0baaf",
+        "revocationRoot": "0x3426f60533cbad000dd1f73aebe24046e99b0f85277e9f94e4fc4ddf9cfdd46d",
+        "timestamp": 1791945648,
+        "count": 256,
+        "prevHead": "0xeb7d1c90e199e55e7bfa8b48fac379fbe2b398f5533067462b19fb59231d3e94"
+      },
+      "digest": "0xbf4fbdae9fd640fc9bc9cc8edcc1672e0d2cd56a6861a0f5415a650dcccb9f49",
+      "digest_matches_event": true,
+      "signatures": "0x1ba20b3d28d15c4915f2d7b7b5fe3aad71990ff7dbbe7b16cf325412b68fafb9536cad1cf680bd882b06eb4423397d79359c48f1a32dc22ce072e6125f76d8ce1c77eedc1441b0d19a152bca0366201d5ee4b90ed41edde9b7075feb1c2ee006ac29245ed65f88435a984e251e1c6adafb83a32a606e9860417a96586f6465f2fa1b90bdf9d1255da200c84f515df41c1b0e9aba0f72ce9758acfbbb981adc0f3c867808abba4dbcd4c006e0099b0f8dbc2b41d53202ea802c0242ee365abe1053bf1c"
+    },
+    {
+      "epoch": 8,
+      "txHash": "0x662384eb91028711f5d0ae730e14a1519cf52eab1c15eb077b2402836b78a907",
+      "block": 11910331,
+      "gasUsed": 178752,
+      "record": {
+        "issuanceRoot": "0x32868d5c33ad46a328364c3b06188f8235a81217ccfe8bcd76261c803a44957a",
+        "revocationRoot": "0xe2f5bb6462cb3f6af31d1ef46913290c2c0e2d3b15a644c2cfdd3a874978917c",
+        "timestamp": 1791945660,
+        "count": 256,
+        "prevHead": "0xbf4fbdae9fd640fc9bc9cc8edcc1672e0d2cd56a6861a0f5415a650dcccb9f49"
+      },
+      "digest": "0x78ac854da99eced2b0da81ebd4bcf8cd47a2d24816e5493c3028d454e5a4ff8b",
+      "digest_matches_event": true,
+      "signatures": "0x9aae35fb13abe91048f3ce1874429e978c85cd92c3006d6290580725ae40653b7e477c8e5ec1e69fea32d7ce1b61ceb6bc76c039fa4ea6bd8734810d4bb820ed1b2ec42639c3077af0088a63417768fb5793f2fd8deeee4c4df64706b655df45c524771384bbad40126ecc2aefa52786e2b753bb312cfd42a811b132137c08fe401c06b63733f3c5354bd2285d0ffbfbef54a34a9ec67d7861d1e6ff8866e94fe54a2a3264d252ea06fb9013c30f24cd31d989314a69a58386e5e83c98a2d31c49001c"
+    },
+    {
+      "epoch": 9,
+      "txHash": "0x354e179ce82195cf0efbbc1e09508e3c74d81a115ffcadca7939e9efb25bbef6",
+      "block": 11910332,
+      "gasUsed": 178752,
+      "record": {
+        "issuanceRoot": "0xd65cfdc7262ab0302c0f06b9f4f8deb5859eb7926cf156b1f58ad0eeda971076",
+        "revocationRoot": "0xe19980beaf883de89b57200e32e5559b177e812ba822423c119608957e1b2bdb",
+        "timestamp": 1791945672,
+        "count": 256,
+        "prevHead": "0x78ac854da99eced2b0da81ebd4bcf8cd47a2d24816e5493c3028d454e5a4ff8b"
+      },
+      "digest": "0x1699daad193646c62643ed61a5ea089e64b948128828ea972e93eea49c20cdf7",
+      "digest_matches_event": true,
+      "signatures": "0xb5850b2cb255c472b695944873e0eab260f3f3bddc5ca287b6abfb0e70c36bd7345c10812c4e8245493892dd640ecb9e64b6c2e1b6278aba4b4adc2f37687f321bce487d8fcaa1fc3e70bc97ab300fcc5243eced00025bec01010bdc5f0fa6d18c54bac296c30af04c0739a393b458db493eebe73b93b6bbaa98022f4a74c8e16f1c3bf3c028f72f28de73c35042022fcc74ab7331cede5d36d300e685443b529cc52cd55c58b101b120e28a01ab60fcb8bf76d20a6d3d3943499e43f23897bf0ad51c"
+    },
+    {
+      "epoch": 10,
+      "txHash": "0xcb04ce038f3c4035a660cb1a642524dfff415386488e5a9f8b0846f6efcb56c7",
+      "block": 11910335,
+      "gasUsed": 178752,
+      "record": {
+        "issuanceRoot": "0xe5241fc7e7e34dc1d04747271bdc58174ec599e738f46717a542a060ed313513",
+        "revocationRoot": "0xfb0caa15b634b36b3245e46a05a3ae9de4a5db5bb0803c0085a08217a52d618b",
+        "timestamp": 1791945720,
+        "count": 256,
+        "prevHead": "0x1699daad193646c62643ed61a5ea089e64b948128828ea972e93eea49c20cdf7"
+      },
+      "digest": "0x6de119e92d06c24be7be0738f34584a1924644371167dca084916adbbb36689a",
+      "digest_matches_event": true,
+      "signatures": "0x67fe941748a4d38b11040c10788ab583eab24b1b6c71cc7379e827f4d96c6db753188783bd95de9ae95383c2b4e5c922b6aeaead3cf310aad6f9c7d5a1aaabda1c0c16a28efcf2f2534e8c873407be93e0e2a64cc49776703b5a42d66b1bd4f26e06719d2a8deff1f26decb82934cbfc13bd6ce07f805c59497ad4f02745cfc4711c7152d100cea96a6a3a0a5bf245ec7ce6c2203b18b3ce2add0ef430561a55ef824648569b611d150b8ff19c4a9dc2f2c91a284f54128d806a250b6d0ddab351121b"
+    }
+  ],
+  "issuerId": "0xc0e27bc88c0aa93d041bafc751a3f304e456eaee3c52e4c43e646dd96fd3b4b7",
+  "officers": [
+    "0x0CeD45BD33aDd56F0bD9713a43b33107e02a2F55",
+    "0x313942Fd13F39680aAC989828BED2EFe827da93d",
+    "0x7C1A175d4a9981c374F32f0e1BaA5840beeF6E66",
+    "0x30f01593E38B21B4098298095471fc9eaA13a060",
+    "0x6e92D5D1E23c604Cb97D18809e51D42170c97362"
+  ],
+  "threshold": 3,
+  "registerTx": "0x05c51f7b52a4c9cc65152c8a79195b58448298e31b62d97ce29c627079aaf80d"
+}
