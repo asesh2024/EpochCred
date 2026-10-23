@@ -1,287 +1,364 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {CredLib} from "./CredLib.sol";
+import "./CredLib.sol";
 
-/// @title EpochCredRegistry
-/// @notice Quorum-endorsed (k-of-n independent ECDSA signatures), epoch-anchored credential registry.
-///  * An accreditation authority registers an issuer (university) with n officer keys and a threshold k.
-///  * Once per epoch, any relayer submits ONE transaction carrying k-of-n EIP-712 signatures over
-///    (issuanceRoot, revocationRoot, count, prevHead). The registry stores a single 32-byte digest per
-///    epoch (hash-chained to the previous one); full roots are emitted in an event (digest mode) or
-///    additionally stored (full mode, used as an ablation).
-///  * Revocations are folded into the same commitment as the root of a sparse Merkle tree keyed by
-///    privacy-preserving nullifiers, so revocation cost is O(1) per epoch regardless of how many
-///    credentials are revoked.
 contract EpochCredRegistry {
-    struct EpochRecord {
-        bytes32 issuanceRoot;
-        bytes32 revocationRoot;
-        uint64 timestamp;
-        uint32 count;
-        bytes32 prevHead;
-    }
-
     struct Issuer {
-        uint64 epoch; // last committed epoch (0 = none)
-        uint64 rotationNonce;
-        uint8 threshold;
         bool active;
-        bool frozen; // set by a successful revocation-removal fraud proof
-        uint64 restoredAt; // epoch at which the accreditor last restored a frozen issuer (0 = never)
-        bytes32 head; // digest of last committed epoch
+        bool frozen;
+        uint16 k;
+        uint32 epoch;
+        uint32 restoredAt;
+        uint32 gen;
+        uint32 rotNonce;
+        uint32 obligationCount;
+        bytes32 head;
     }
 
-    bytes32 public constant EPOCH_TYPEHASH = keccak256(
-        "EpochCommit(bytes32 issuerId,uint64 epoch,bytes32 issuanceRoot,bytes32 revocationRoot,uint32 count,bytes32 prevHead)"
-    );
-    bytes32 public constant ROTATE_TYPEHASH =
-        keccak256("RotateOfficers(bytes32 issuerId,uint64 nonce,bytes32 officersHash,uint8 threshold)");
+    struct Sig {
+        uint8 v;
+        bytes32 r;
+        bytes32 s;
+    }
+
+    struct EpochRecord {
+        bytes32 rIss;
+        bytes32 rRev;
+        uint64 timestamp;
+        uint32 batchSize;
+        uint32 gen;
+        bytes32 prevDigest;
+    }
 
     address public immutable accreditor;
-    bool public immutable storeFull;
     bytes32 public immutable DOMAIN_SEPARATOR;
 
-    mapping(bytes32 => Issuer) public issuers;
-    mapping(bytes32 => address[]) internal officers;
-    mapping(bytes32 => mapping(address => bool)) public isOfficer;
-    mapping(bytes32 => mapping(uint64 => bytes32)) public epochDigest;
-    mapping(bytes32 => mapping(uint64 => EpochRecord)) internal fullRecords; // ablation only
+    bytes32 public constant EPOCH_TYPEHASH =
+        keccak256("EpochCommit(bytes32 issuerId,uint32 epoch,bytes32 rIss,bytes32 rRev,uint32 batchSize,uint32 gen,uint64 sigDeadline,bytes32 prevHead)");
+    bytes32 public constant ROTATE_TYPEHASH =
+        keccak256("RotateOfficers(bytes32 issuerId,uint32 nonce,bytes32 newOfficersHash,uint16 newK)");
+    bytes32 public constant REVACK_TYPEHASH =
+        keccak256("RevAck(bytes32 issuerId,bytes32 nullifier,uint32 gen,uint64 deadline)");
 
-    event IssuerRegistered(bytes32 indexed issuerId, address[] officers, uint8 threshold);
-    event OfficersRotated(bytes32 indexed issuerId, address[] officers, uint8 threshold);
+    mapping(bytes32 => Issuer) public issuers;
+    mapping(bytes32 => mapping(address => bool)) public isOfficer;
+    mapping(bytes32 => address[]) private _currentOfficers;
+    mapping(bytes32 => mapping(uint32 => bytes32)) public epochDigest;
+
+    // Lifecycle Obligation Preservation & Idempotent Adjudication
+    mapping(bytes32 => mapping(uint32 => bytes32)) public genOfficerRoot;
+    mapping(bytes32 => bytes32) public obligationHead;
+    mapping(bytes32 => mapping(bytes32 => bool)) public processedChallenges; // Idempotence check
+
+    event IssuerRegistered(bytes32 indexed issuerId, uint256 n, uint16 k, uint32 gen);
     event EpochCommitted(
         bytes32 indexed issuerId,
-        uint64 indexed epoch,
-        bytes32 issuanceRoot,
-        bytes32 revocationRoot,
+        uint32 indexed epoch,
+        bytes32 rIss,
+        bytes32 rRev,
         uint64 timestamp,
-        uint32 count,
-        bytes32 prevHead,
+        uint32 batchSize,
+        uint32 gen,
+        bytes32 prevDigest,
         bytes32 digest
     );
+    event OfficersRotated(bytes32 indexed issuerId, uint32 oldGen, uint32 newGen, uint16 newK, bytes32 archivedRoot);
+    event IssuerFrozen(bytes32 indexed issuerId, uint32 offendingEpoch, bytes32 nullifier, string reason);
+    event IssuerRestored(bytes32 indexed issuerId, uint32 restoredAtEpoch, uint32 clearedObligations);
 
-    error NotAccreditor();
-    error UnknownIssuer();
-    error BadEpoch();
-    error BadThreshold();
-    error BadSignatures();
-    error StaleHead();
-    error Frozen();
-    error BadFraudProof();
-
-    event IssuerFrozen(bytes32 indexed issuerId, uint64 oldEpoch, uint64 newEpoch, bytes32 nullifier, address reporter);
-    event IssuerRestored(bytes32 indexed issuerId, uint64 atEpoch);
-    error NotFrozen();
-
-    constructor(bool _storeFull) {
+    constructor() {
         accreditor = msg.sender;
-        storeFull = _storeFull;
         DOMAIN_SEPARATOR = keccak256(
             abi.encode(
                 keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
-                keccak256("EpochCred"),
-                keccak256("1"),
+                keccak256(bytes("EpochCredRegistry")),
+                keccak256(bytes("2")),
                 block.chainid,
                 address(this)
             )
         );
     }
 
-    // --------------------------------------------------------------------- governance
-    function registerIssuer(bytes32 issuerId, address[] calldata _officers, uint8 threshold) external {
-        if (msg.sender != accreditor) revert NotAccreditor();
-        if (issuers[issuerId].active) revert BadEpoch();
-        _setOfficers(issuerId, _officers, threshold);
-        issuers[issuerId].active = true;
-        emit IssuerRegistered(issuerId, _officers, threshold);
-    }
+    function registerIssuer(
+        bytes32 issuerId,
+        address[] calldata officers,
+        uint16 k
+    ) external {
+        require(msg.sender == accreditor, "Only accreditor");
+        require(!issuers[issuerId].active, "Already registered");
+        require(k > 0 && k <= officers.length, "Invalid quorum k");
 
-    /// @notice k-of-n of the CURRENT officers authorise a new officer set (key rotation / recovery).
-    function rotateOfficers(bytes32 issuerId, address[] calldata newOfficers, uint8 newThreshold, bytes calldata sigs)
-        external
-    {
-        Issuer storage s = issuers[issuerId];
-        if (!s.active) revert UnknownIssuer();
-        bytes32 structHash = keccak256(
-            abi.encode(ROTATE_TYPEHASH, issuerId, s.rotationNonce, keccak256(abi.encodePacked(newOfficers)), newThreshold)
-        );
-        _checkThreshold(issuerId, _digest712(structHash), sigs, s.threshold);
-        s.rotationNonce++;
-        address[] storage old = officers[issuerId];
-        for (uint256 i = 0; i < old.length; ++i) isOfficer[issuerId][old[i]] = false;
-        delete officers[issuerId];
-        _setOfficers(issuerId, newOfficers, newThreshold);
-        emit OfficersRotated(issuerId, newOfficers, newThreshold);
-    }
-
-    function _setOfficers(bytes32 issuerId, address[] calldata _officers, uint8 threshold) internal {
-        if (threshold == 0 || threshold > _officers.length) revert BadThreshold();
-        for (uint256 i = 0; i < _officers.length; ++i) {
-            if (_officers[i] == address(0) || isOfficer[issuerId][_officers[i]]) revert BadThreshold();
-            isOfficer[issuerId][_officers[i]] = true;
-            officers[issuerId].push(_officers[i]);
+        for (uint256 i = 0; i < officers.length; ++i) {
+            address o = officers[i];
+            require(o != address(0) && !isOfficer[issuerId][o], "Duplicate/zero officer");
+            isOfficer[issuerId][o] = true;
+            _currentOfficers[issuerId].push(o);
         }
-        issuers[issuerId].threshold = threshold;
+
+        issuers[issuerId] = Issuer({
+            active: true,
+            frozen: false,
+            k: k,
+            epoch: 0,
+            restoredAt: 0,
+            gen: 1,
+            rotNonce: 0,
+            obligationCount: 0,
+            head: bytes32(0)
+        });
+
+        emit IssuerRegistered(issuerId, officers.length, k, 1);
     }
 
-    function getOfficers(bytes32 issuerId) external view returns (address[] memory) {
-        return officers[issuerId];
-    }
-
-    // --------------------------------------------------------------------- epoch commit
     function commitEpoch(
         bytes32 issuerId,
-        uint64 epoch,
-        bytes32 issuanceRoot,
-        bytes32 revocationRoot,
-        uint32 count,
-        bytes calldata sigs
-    ) external returns (bytes32 digest) {
-        Issuer storage s = issuers[issuerId];
-        if (!s.active) revert UnknownIssuer();
-        if (s.frozen) revert Frozen();
-        if (epoch != s.epoch + 1) revert BadEpoch();
-        bytes32 prevHead = s.head;
-        bytes32 structHash =
-            keccak256(abi.encode(EPOCH_TYPEHASH, issuerId, epoch, issuanceRoot, revocationRoot, count, prevHead));
-        _checkThreshold(issuerId, _digest712(structHash), sigs, s.threshold);
+        uint32 e,
+        bytes32 rIss,
+        bytes32 rRev,
+        uint32 batchSize,
+        uint32 gen,
+        uint64 sigDeadline,
+        Sig[] calldata sigs
+    ) external {
+        Issuer storage I = issuers[issuerId];
+        require(I.active && !I.frozen, "Issuer inactive or frozen");
+        require(e == I.epoch + 1, "Non-sequential epoch");
+        require(gen == I.gen, "Generation mismatch");
+        require(block.timestamp <= sigDeadline, "Endorsement expired");
+        require(sigs.length >= I.k, "Insufficient signatures");
 
-        uint64 ts = uint64(block.timestamp);
-        digest = recordDigest(EpochRecord(issuanceRoot, revocationRoot, ts, count, prevHead));
-        epochDigest[issuerId][epoch] = digest;
-        s.epoch = epoch;
-        s.head = digest;
-        if (storeFull) fullRecords[issuerId][epoch] = EpochRecord(issuanceRoot, revocationRoot, ts, count, prevHead);
-        emit EpochCommitted(issuerId, epoch, issuanceRoot, revocationRoot, ts, count, prevHead, digest);
+        bytes32 structHash = keccak256(
+            abi.encode(EPOCH_TYPEHASH, issuerId, e, rIss, rRev, batchSize, gen, sigDeadline, I.head)
+        );
+        bytes32 digest = keccak256(abi.encodePacked("\x19\x01", DOMAIN_SEPARATOR, structHash));
+
+        _verifyCurrentQuorum(issuerId, digest, sigs, I.k);
+
+        bytes32 prev = I.head;
+        uint64 nowTs = uint64(block.timestamp);
+        bytes32 D = keccak256(abi.encode(rIss, rRev, nowTs, batchSize, gen, prev));
+
+        epochDigest[issuerId][e] = D;
+        I.head = D;
+        I.epoch = e;
+
+        emit EpochCommitted(issuerId, e, rIss, rRev, nowTs, batchSize, gen, prev, D);
     }
 
-    function recordDigest(EpochRecord memory r) public pure returns (bytes32) {
-        return keccak256(abi.encode(r.issuanceRoot, r.revocationRoot, r.timestamp, r.count, r.prevHead));
-    }
+    function rotateOfficers(
+        bytes32 issuerId,
+        uint32 nonce,
+        address[] calldata newOfficers,
+        uint16 newK,
+        Sig[] calldata sigs
+    ) external {
+        Issuer storage I = issuers[issuerId];
+        require(I.active, "Issuer inactive");
+        require(nonce == I.rotNonce + 1, "Invalid rotation nonce");
+        require(newK > 0 && newK <= newOfficers.length, "Invalid newK");
 
-    function getFullRecord(bytes32 issuerId, uint64 epoch) external view returns (EpochRecord memory) {
-        return fullRecords[issuerId][epoch];
-    }
+        bytes32 newOfficersHash = keccak256(abi.encodePacked(newOfficers));
+        bytes32 structHash = keccak256(abi.encode(ROTATE_TYPEHASH, issuerId, nonce, newOfficersHash, newK));
+        bytes32 digest = keccak256(abi.encodePacked("\x19\x01", DOMAIN_SEPARATOR, structHash));
 
-    function _digest712(bytes32 structHash) internal view returns (bytes32) {
-        return keccak256(abi.encodePacked("\x19\x01", DOMAIN_SEPARATOR, structHash));
-    }
+        _verifyCurrentQuorum(issuerId, digest, sigs, I.k);
 
-    /// @dev signatures are 65-byte (r,s,v) blobs, concatenated, signers strictly ascending (no duplicates)
-    function _checkThreshold(bytes32 issuerId, bytes32 digest, bytes calldata sigs, uint8 threshold) internal view {
-        uint256 n = sigs.length / 65;
-        if (sigs.length % 65 != 0 || n < threshold) revert BadSignatures();
-        address last = address(0);
-        for (uint256 i = 0; i < threshold; ++i) {
-            bytes32 r;
-            bytes32 s_;
-            uint8 v;
-            assembly {
-                let off := add(sigs.offset, mul(i, 65))
-                r := calldataload(off)
-                s_ := calldataload(add(off, 32))
-                v := byte(0, calldataload(add(off, 64)))
-            }
-            // reject malleable high-s signatures (EIP-2)
-            if (uint256(s_) > 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0) revert BadSignatures();
-            address signer = ecrecover(digest, v, r, s_);
-            if (signer <= last || !isOfficer[issuerId][signer]) revert BadSignatures();
-            last = signer;
+        uint32 oldGen = I.gen;
+        bytes32 archivedRoot = keccak256(abi.encodePacked(_currentOfficers[issuerId], I.k));
+        genOfficerRoot[issuerId][oldGen] = archivedRoot;
+
+        address[] storage cur = _currentOfficers[issuerId];
+        for (uint256 i = 0; i < cur.length; ++i) {
+            isOfficer[issuerId][cur[i]] = false;
         }
+        delete _currentOfficers[issuerId];
+
+        for (uint256 i = 0; i < newOfficers.length; ++i) {
+            address o = newOfficers[i];
+            require(o != address(0) && !isOfficer[issuerId][o], "Duplicate/zero new officer");
+            isOfficer[issuerId][o] = true;
+            _currentOfficers[issuerId].push(o);
+        }
+
+        I.k = newK;
+        I.rotNonce = nonce;
+        I.gen = oldGen + 1;
+
+        emit OfficersRotated(issuerId, oldGen, oldGen + 1, newK, archivedRoot);
     }
 
-    // --------------------------------------------------------------------- append-only revocation
-    /// @notice Fraud proof: anyone holding the published revocation sets can show that a nullifier present
-    ///         under the revocation root of epoch `oldE` is absent under the root of a later epoch `newE`.
-    ///         The registry then freezes the issuer: no further commits, and on-chain verification fails.
-    ///         This makes "revocation is cumulative" enforceable instead of an assumption on officer honesty.
     function challengeRevocationRemoval(
         bytes32 issuerId,
-        uint64 oldE,
-        EpochRecord calldata oldRec,
-        uint64 newE,
-        EpochRecord calldata newRec,
+        uint32 e1,
+        uint32 e2,
+        EpochRecord calldata rec1,
+        EpochRecord calldata rec2,
         bytes32 nullifier,
-        NonRevocation calldata memberProof,
-        NonRevocation calldata absentProof
+        uint256 bitmap1,
+        bytes32[] calldata sibs1,
+        uint256 bitmap2,
+        bytes32[] calldata sibs2
     ) external {
-        Issuer storage s = issuers[issuerId];
-        // newE > restoredAt: violations already adjudicated before a restoration cannot be replayed to re-freeze,
-        // but a later epoch that again omits an earlier nullifier is a new, challengeable violation
-        if (!s.active || s.frozen || newE <= oldE || newE <= s.restoredAt) revert BadFraudProof();
-        if (recordDigest(oldRec) != epochDigest[issuerId][oldE]) revert BadFraudProof();
-        if (recordDigest(newRec) != epochDigest[issuerId][newE]) revert BadFraudProof();
-        if (CredLib.smtRoot(nullifier, CredLib.smtLeaf(nullifier), memberProof.bitmap, memberProof.siblings) != oldRec.revocationRoot) {
-            revert BadFraudProof();
-        }
-        if (CredLib.smtRoot(nullifier, bytes32(0), absentProof.bitmap, absentProof.siblings) != newRec.revocationRoot) {
-            revert BadFraudProof();
-        }
-        s.frozen = true;
-        emit IssuerFrozen(issuerId, oldE, newE, nullifier, msg.sender);
+        Issuer storage I = issuers[issuerId];
+        require(I.active, "Issuer inactive");
+        bytes32 chalId = keccak256(abi.encodePacked("ROLLBACK", issuerId, nullifier, e1, e2));
+        require(!processedChallenges[issuerId][chalId], "Challenge already processed");
+        processedChallenges[issuerId][chalId] = true;
+
+        require(e1 < e2, "Invalid epoch ordering");
+        require(_hashRecord(rec1) == epochDigest[issuerId][e1], "rec1 digest mismatch");
+        require(_hashRecord(rec2) == epochDigest[issuerId][e2], "rec2 digest mismatch");
+
+        bytes32 leaf = CredLib.hashNullifierLeaf(nullifier);
+        require(CredLib.smtRoot(nullifier, leaf, bitmap1, sibs1) == rec1.rRev, "Not member in e1");
+        require(CredLib.smtRoot(nullifier, bytes32(0), bitmap2, sibs2) == rec2.rRev, "Not absent in e2");
+
+        I.frozen = true;
+        obligationHead[issuerId] = keccak256(abi.encodePacked(obligationHead[issuerId], nullifier));
+        unchecked { ++I.obligationCount; }
+
+        emit IssuerFrozen(issuerId, e2, nullifier, "REVOCATION_ROLLBACK");
     }
 
-    /// @notice Accreditor-only restoration after a freeze (governance decision taken off-chain). The issuer's next
-    ///         commit must again contain every previously committed nullifier, otherwise it is challengeable anew.
-    function restoreIssuer(bytes32 issuerId) external {
-        if (msg.sender != accreditor) revert NotAccreditor();
-        Issuer storage s = issuers[issuerId];
-        if (!s.frozen) revert NotFrozen();
-        s.frozen = false;
-        s.restoredAt = s.epoch;
-        emit IssuerRestored(issuerId, s.epoch);
-    }
-
-    // --------------------------------------------------------------------- on-chain verification
-    struct Disclosure {
-        bytes key;
-        bytes value;
-        bytes32 salt;
-        uint256 attrIndex;
-        bytes32[] attrPath;
-    }
-
-    struct CredBody {
-        address holder;
-        bytes32 nullifier;
-        uint64 validUntil;
-        bytes32 schemaId;
-        uint256 leafIndex;
-        bytes32[] issuancePath;
-    }
-
-    struct NonRevocation {
-        uint256 bitmap;
-        bytes32[] siblings;
-    }
-
-    /// @notice Verifies one disclosed attribute of a credential issued in `issEpoch`, and that the
-    ///         credential is not revoked according to the issuer's LATEST epoch, which must be at most
-    ///         `maxStaleness` seconds old. Intended for smart-contract relying parties.
-    function verifyAttribute(
+    /// @notice Idempotent challenge processing with obligation-specific adjudication (Reviewer Issue 2 & 3)
+    function challengeMissedDeadline(
         bytes32 issuerId,
-        uint64 issEpoch,
-        EpochRecord calldata issRec,
-        EpochRecord calldata latestRec,
-        Disclosure calldata d,
-        CredBody calldata c,
-        NonRevocation calldata nr,
-        uint256 maxStaleness
-    ) external view returns (bool) {
-        Issuer storage s = issuers[issuerId];
-        if (!s.active || s.frozen) return false;
-        if (recordDigest(issRec) != epochDigest[issuerId][issEpoch]) return false;
-        if (recordDigest(latestRec) != s.head) return false;
-        if (block.timestamp > latestRec.timestamp + maxStaleness) return false;
-        if (block.timestamp > c.validUntil) return false;
-        if (c.leafIndex >= issRec.count) return false; // padding positions are not credentials
+        bytes32 nullifier,
+        uint32 ackGen,
+        uint64 deadline,
+        Sig[] calldata ackSigs,
+        address[] calldata archivedOfficers,
+        uint16 archivedK,
+        uint32 eHead,
+        EpochRecord calldata recHead,
+        uint256 nrBitmap,
+        bytes32[] calldata nrSibs
+    ) external {
+        Issuer storage I = issuers[issuerId];
+        require(I.active, "Issuer inactive");
+        bytes32 chalId = keccak256(abi.encodePacked("DEADLINE", issuerId, nullifier, deadline));
+        require(!processedChallenges[issuerId][chalId], "Challenge already processed");
+        processedChallenges[issuerId][chalId] = true;
 
-        bytes32 attrRoot = CredLib.merkleRoot(CredLib.attrLeaf(d.salt, d.key, d.value), d.attrIndex, d.attrPath);
-        bytes32 leaf = CredLib.credLeaf(attrRoot, c.holder, c.nullifier, c.validUntil, c.schemaId);
-        if (CredLib.merkleRoot(leaf, c.leafIndex, c.issuancePath) != issRec.issuanceRoot) return false;
-        // non-membership: the SMT slot at `nullifier` must be empty under the latest revocation root
-        if (CredLib.smtRoot(c.nullifier, bytes32(0), nr.bitmap, nr.siblings) != latestRec.revocationRoot) return false;
-        return true;
+        require(block.timestamp > deadline, "Deadline not yet passed");
+        require(_hashRecord(recHead) == epochDigest[issuerId][eHead], "recHead digest mismatch");
+        require(recHead.timestamp >= deadline || eHead == I.epoch, "Not post-deadline head");
+
+        bytes32 structHash = keccak256(abi.encode(REVACK_TYPEHASH, issuerId, nullifier, ackGen, deadline));
+        bytes32 digest = keccak256(abi.encodePacked("\x19\x01", DOMAIN_SEPARATOR, structHash));
+
+        if (ackGen == I.gen) {
+            _verifyCurrentQuorum(issuerId, digest, ackSigs, 1);
+        } else {
+            require(
+                keccak256(abi.encodePacked(archivedOfficers, archivedK)) == genOfficerRoot[issuerId][ackGen],
+                "Invalid archived officer set"
+            );
+            _verifyArchivedQuorum(archivedOfficers, digest, ackSigs, 1);
+        }
+
+        require(CredLib.smtRoot(nullifier, bytes32(0), nrBitmap, nrSibs) == recHead.rRev, "Nullifier is present");
+
+        I.frozen = true;
+        obligationHead[issuerId] = keccak256(abi.encodePacked(obligationHead[issuerId], nullifier));
+        unchecked { ++I.obligationCount; }
+
+        emit IssuerFrozen(issuerId, eHead, nullifier, "MISSED_REVACK_DEADLINE");
+    }
+
+    /// @notice Atomic remedial-fenced restoration enforcing sigDeadline (Reviewer Issue 3)
+    function restoreAndRemediate(
+        bytes32 issuerId,
+        uint32 eNew,
+        bytes32 rIss,
+        bytes32 rRev,
+        uint32 batchSize,
+        uint64 sigDeadline,
+        Sig[] calldata officerSigs,
+        bytes32[] calldata obligatedNullifiers,
+        uint256[] calldata memBitmaps,
+        bytes32[][] calldata memSibs
+    ) external {
+        Issuer storage I = issuers[issuerId];
+        require(msg.sender == accreditor, "Only accreditor");
+        require(I.frozen, "Issuer not frozen");
+        require(eNew == I.epoch + 1, "Must advance epoch");
+        require(block.timestamp <= sigDeadline, "Remedial endorsement expired");
+        require(obligatedNullifiers.length == I.obligationCount, "Obligation count mismatch");
+
+        bytes32 structHash = keccak256(
+            abi.encode(EPOCH_TYPEHASH, issuerId, eNew, rIss, rRev, batchSize, I.gen, sigDeadline, I.head)
+        );
+        bytes32 digest = keccak256(abi.encodePacked("\x19\x01", DOMAIN_SEPARATOR, structHash));
+        _verifyCurrentQuorum(issuerId, digest, officerSigs, I.k);
+
+        bytes32 acc = bytes32(0);
+        for (uint256 j = 0; j < obligatedNullifiers.length; ++j) {
+            bytes32 nu = obligatedNullifiers[j];
+            acc = keccak256(abi.encodePacked(acc, nu));
+            bytes32 leaf = CredLib.hashNullifierLeaf(nu);
+            require(
+                CredLib.smtRoot(nu, leaf, memBitmaps[j], memSibs[j]) == rRev,
+                "Obligated nullifier missing in remedial root"
+            );
+        }
+        require(acc == obligationHead[issuerId], "Obligation accumulator mismatch");
+
+        uint32 cleared = I.obligationCount;
+        I.frozen = false;
+        I.restoredAt = eNew; // Used only for tracking historical remediation boundaries, not blocking challenges
+        I.obligationCount = 0;
+        obligationHead[issuerId] = bytes32(0);
+
+        uint64 nowTs = uint64(block.timestamp);
+        bytes32 prev = I.head;
+        bytes32 D = keccak256(abi.encode(rIss, rRev, nowTs, batchSize, I.gen, prev));
+        epochDigest[issuerId][eNew] = D;
+        I.head = D;
+        I.epoch = eNew;
+
+        emit IssuerRestored(issuerId, eNew, cleared);
+        emit EpochCommitted(issuerId, eNew, rIss, rRev, nowTs, batchSize, I.gen, prev, D);
+    }
+
+    function _hashRecord(EpochRecord calldata rec) private pure returns (bytes32) {
+        return keccak256(abi.encode(rec.rIss, rec.rRev, rec.timestamp, rec.batchSize, rec.gen, rec.prevDigest));
+    }
+
+    function _verifyCurrentQuorum(
+        bytes32 issuerId,
+        bytes32 digest,
+        Sig[] calldata sigs,
+        uint16 requiredSigs
+    ) private view {
+        address last = address(0);
+        for (uint256 i = 0; i < requiredSigs; ++i) {
+            address a = CredLib.recoverStrict(digest, sigs[i].v, sigs[i].r, sigs[i].s);
+            require(a > last && isOfficer[issuerId][a], "Invalid or unsorted officer sig");
+            last = a;
+        }
+    }
+
+    function _verifyArchivedQuorum(
+        address[] calldata archivedOfficers,
+        bytes32 digest,
+        Sig[] calldata sigs,
+        uint16 requiredSigs
+    ) private pure {
+        address last = address(0);
+        for (uint256 i = 0; i < requiredSigs; ++i) {
+            address a = CredLib.recoverStrict(digest, sigs[i].v, sigs[i].r, sigs[i].s);
+            require(a > last, "Unsorted archived sig");
+            bool found = false;
+            for (uint256 j = 0; j < archivedOfficers.length; ++j) {
+                if (archivedOfficers[j] == a) {
+                    found = true;
+                    break;
+                }
+            }
+            require(found, "Not an officer in archived generation");
+            last = a;
+        }
     }
 }
